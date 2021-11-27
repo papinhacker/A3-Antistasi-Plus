@@ -161,7 +161,7 @@ shop_AA = ["CUP_B_ZSU23_Afghan_CDF", "CUP_B_M163_USA", "CUP_O_2S6_RU"];
 shop_MRAP = ["CUP_I_BRDM2_HQ_NAPA", "CUP_I_BRDM2_NAPA", "CUP_B_RG31_M2_OD_USA"];
 shop_wheel_apc = ["CUP_B_BTR60_FIA", "CUP_B_BTR80_FIA", "CUP_I_LAV25M240_RACS"];
 shop_track_apc = ["CUP_B_MTLB_pk_FIA", "CUP_I_BMP1_TK_GUE", "CUP_I_BMP2_NAPA"];
-shop_heli = ["CUP_I_Ka60_Blk_ION", "CUP_I_412_Military_Armed_PMC", "CUP_B_AW159_HIL"];
+shop_heli = ["CUP_C_MI6A_RU", "CUP_I_412_Military_Armed_PMC", "CUP_B_AW159_HIL"];
 shop_tank = ["CUP_I_T34_NAPA", "CUP_I_T55_NAPA", "CUP_B_M60A3_USMC"];
 shop_plane = ["CUP_I_L39_AAF", "I_Plane_Fighter_03_dynamicLoadout_F", "CUP_I_AV8B_DYN_AAF"];
 

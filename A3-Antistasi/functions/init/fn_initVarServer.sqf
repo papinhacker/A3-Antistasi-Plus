@@ -951,7 +951,7 @@ if(A3A_hasCup) then {
 };
 
 //lootcrate cost
-server setVariable [lootCrate, 100, true];
+server setVariable [lootCrate, 500, true];
 
 //rally point cost
 server setVariable [rallyPoint, 100, true];

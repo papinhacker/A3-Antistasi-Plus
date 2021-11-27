@@ -511,6 +511,7 @@ vehicleBox addAction ["Heal nearby units", A3A_fnc_vehicleBoxHeal,nil,0,false,tr
 if (A3A_hasACE) then { [vehicleBox, VehicleBox] call ace_common_fnc_claim;};	//Disables ALL Ace Interactions
 vehicleBox addAction ["Buy Vehicle", {if ([player,300] call A3A_fnc_enemyNearCheck) then {["Purchase Vehicle", "You cannot buy vehicles while there are enemies near you."] call A3A_fnc_customHint;} else {[] call SCRT_fnc_ui_createBuyVehicleMenu}},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)", 4];
 vehicleBox addAction ["Buy Loot Crate", {[] call SCRT_fnc_loot_createLootCrate},nil,0,false,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull]) and (side (group _this) == teamPlayer)",4];
+vehicleBox addAction ["Открыть тайник", { cunt= execVM "SCRT\locker.sqf" }];
 vehicleBox addAction ["Move this asset", A3A_fnc_moveHQObject,nil,0,false,true,"","(_this == theBoss)", 4];
 
 mapX allowDamage false;

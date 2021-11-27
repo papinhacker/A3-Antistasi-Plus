@@ -12,14 +12,14 @@ __________________________________________________________________*/
 		stock = STOCK;\
 	};
 
-#define MAGAZINE_STOCK 200
-#define LAUNCHER_STOCK 15
-#define PISTOL_STOCK 50
-#define RIFLE_STOCK 20
-#define MZ_STOCK 50
-#define NN_STOCK 50
-#define PN_STOCK 25
-#define MISC_STOCK 50
+#define MAGAZINE_STOCK 200000
+#define LAUNCHER_STOCK 15000
+#define PISTOL_STOCK 50000
+#define RIFLE_STOCK 20000
+#define MZ_STOCK 50000
+#define NN_STOCK 50000
+#define PN_STOCK 25000
+#define MISC_STOCK 50000
 
 class cfgHALsStore 
 {
@@ -8863,31 +8863,31 @@ class cfgHALsStore
 			displayName = "Launchers";
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\secondaryWeapon_ca.paa";
 
-			ITEM(rhs_weap_rpg26, 200, 50);
-			ITEM(rhs_weap_rshg2, 200, 50);
-			ITEM(rhs_weap_rpg75, 175, 50);
+			ITEM(rhs_weap_rpg26, 200, 5000);
+			ITEM(rhs_weap_rshg2, 200, 5000);
+			ITEM(rhs_weap_rpg75, 175, 5000);
 
-			ITEM(rhs_weap_m80, 250, 50);
+			ITEM(rhs_weap_m80, 250, 5000);
 
-			ITEM(rhs_weap_m72a7, 300, 50);
+			ITEM(rhs_weap_m72a7, 300, 5000);
 
-			ITEM(UK3CB_Blowpipe, 500, 50);
+			ITEM(UK3CB_Blowpipe, 500, 5000);
 
-			ITEM(rhs_weap_M136, 400, 50);
-			ITEM(rhs_weap_M136_hedp, 500, 50);
-			ITEM(rhs_weap_M136_hp, 500, 50);
+			ITEM(rhs_weap_M136, 400, 50000);
+			ITEM(rhs_weap_M136_hedp, 500, 50000);
+			ITEM(rhs_weap_M136_hp, 500, 50000);
 
-			ITEM(rhs_weap_rpg7, 750, 15);
+			ITEM(rhs_weap_rpg7, 750, 15000);
 
-			ITEM(rhs_weap_maaws, 1300, 15);
+			ITEM(rhs_weap_maaws, 1300, 15000);
 
-			ITEM(rhs_weap_igla, 1300, 50);
-			ITEM(rhs_weap_fim92, 1600, 50);
+			ITEM(rhs_weap_igla, 1300, 50000);
+			ITEM(rhs_weap_fim92, 1600, 50000);
 
-			ITEM(rhs_weap_smaw, 1500, 15);
-			ITEM(rhs_weap_smaw_green, 1500, 15);
+			ITEM(rhs_weap_smaw, 1500, 15000);
+			ITEM(rhs_weap_smaw_green, 1500, 15000);
 
-			ITEM(rhs_weap_fgm148, 6000, 10);
+			ITEM(rhs_weap_fgm148, 6000, 10000);
 		};
 
 		class smg3cbf
@@ -9108,10 +9108,10 @@ class cfgHALsStore
 			ITEM(rhs_weap_XM2010_d, 2000, RIFLE_STOCK);
 			ITEM(rhs_weap_XM2010_sa, 2000, RIFLE_STOCK);
 
-			ITEM(rhs_weap_M107, 3500, 5);
-			ITEM(rhs_weap_M107_d, 3500, 5);
-			ITEM(rhs_weap_M107_w, 3500, 5);
-			ITEM(rhs_weap_m82a1, 3500, 5);
+			ITEM(rhs_weap_M107, 3500, 25);
+			ITEM(rhs_weap_M107_d, 3500, 25);
+			ITEM(rhs_weap_M107_w, 3500, 25);
+			ITEM(rhs_weap_m82a1, 3500, 25);
 
 			ITEM(rhs_weap_mk17_CQC, 2500, RIFLE_STOCK);
 			ITEM(rhs_weap_mk17_STD, 2600, RIFLE_STOCK);

@@ -199,7 +199,7 @@ A3A_Occ_template = switch(true) do {
                         [2, "Using tropical USAF Template", _filename] call A3A_fnc_log;
                     };
                     case (_terrainName in _temperateMaps): {
-                        ["Templates\NewTemplates\CUP\CUP_AI_USAF_Temperate.sqf", west] call A3A_fnc_compatibilityLoadFaction;
+                        ["Templates\NewTemplates\CUP\Cup_AI_BAF_Temperate.sqf", west] call A3A_fnc_compatibilityLoadFaction;
                         [2, "Using arctic USAF Template", _filename] call A3A_fnc_log;
                     };
                     default {

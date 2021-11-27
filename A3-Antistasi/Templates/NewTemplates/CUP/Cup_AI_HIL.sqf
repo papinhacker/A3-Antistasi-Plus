@@ -88,16 +88,16 @@
 
 ["vehiclesBasic", ["B_Quadbike_01_F"]] call _fnc_saveToTemplate; 			
 ["vehiclesLightUnarmed", ["CUP_B_HMMWV_Transport_NATO_T", "CUP_B_HMMWV_Unarmed_NATO_T"]] call _fnc_saveToTemplate; 		
-["vehiclesLightArmed",["CUP_B_HMMWV_MK19_NATO_T", "CUP_B_HMMWV_TOW_NATO_T", "CUP_B_HMMWV_M2_NATO_T", "CUP_B_HMMWV_SOV_M2_NATO_T", "CUP_B_M1165_GMV_NATO_T"]] call _fnc_saveToTemplate; 		//this line determines light and armed vehicles -- Example: ["vehiclesLightArmed",["B_MRAP_01_hmg_F", "B_MRAP_01_gmg_F"]] -- Array, can contain multiple assets
-["vehiclesTrucks", ["CUP_B_MTVR_HIL"]] call _fnc_saveToTemplate; 			
+["vehiclesLightArmed",["CUP_B_HMMWV_DSHKM_GPK_ACR", "CUP_B_M1167_WDL_USA", "CUP_B_M1165_GMV_WDL_USA", "CUP_B_BAF_Coyote_GMG_D", "CUP_B_Dingo_CZ_Des"]] call _fnc_saveToTemplate; 		//this line determines light and armed vehicles -- Example: ["vehiclesLightArmed",["B_MRAP_01_hmg_F", "B_MRAP_01_gmg_F"]] -- Array, can contain multiple assets
+["vehiclesTrucks", ["CUP_B_MTVR_HIL", "CUP_B_T810_Armed_CZ_DES"]] call _fnc_saveToTemplate; 			
 ["vehiclesCargoTrucks", ["B_T_Truck_01_flatbed_F"]] call _fnc_saveToTemplate; 		
-["vehiclesAmmoTrucks", ["CUP_B_MTVR_Ammo_HIL"]] call _fnc_saveToTemplate; 		
-["vehiclesRepairTrucks", ["CUP_B_MTVR_Repair_HIL"]] call _fnc_saveToTemplate; 		
-["vehiclesFuelTrucks", ["CUP_B_MTVR_Refuel_HIL"]] call _fnc_saveToTemplate;		
-["vehiclesMedical", ["CUP_B_HMMWV_Ambulance_NATO_T"]] call _fnc_saveToTemplate;			
-["vehiclesAPCs", ["CUP_B_M2Bradley_NATO_T", "CUP_B_Boxer_HMG_HIL", "CUP_B_Boxer_GMG_HIL"]] call _fnc_saveToTemplate; 				
-["vehiclesTanks", ["CUP_B_M1A1_NATO_T", "CUP_B_Leopard2A6_HIL"]] call _fnc_saveToTemplate; 			
-["vehiclesAA", ["CUP_B_M6LineBacker_NATO_T"]] call _fnc_saveToTemplate; 				
+["vehiclesAmmoTrucks", ["CUP_B_T810_Reammo_CZ_DES"]] call _fnc_saveToTemplate; 		
+["vehiclesRepairTrucks", ["CUP_B_T810_Repair_CZ_DES"]] call _fnc_saveToTemplate; 		
+["vehiclesFuelTrucks", ["CUP_B_T810_Refuel_CZ_DES"]] call _fnc_saveToTemplate;		
+["vehiclesMedical", ["CUP_B_LR_Ambulance_GB_D"]] call _fnc_saveToTemplate;			
+["vehiclesAPCs", ["CUP_B_M2Bradley_NATO_T", "CUP_B_Boxer_HMG_HIL", "CUP_B_Boxer_GMG_HIL", "CUP_B_MTLB_pk_Winter_CDF", "CUP_B_BMP2_CDF"]] call _fnc_saveToTemplate; 				
+["vehiclesTanks", ["CUP_O_T90_RU", "CUP_B_Leopard2A6_HIL"]] call _fnc_saveToTemplate; 			
+["vehiclesAA", ["CUP_B_M6LineBacker_NATO_T", "CUP_O_Datsun_AA", "CUP_B_nM1097_AVENGER_USMC_DES"]] call _fnc_saveToTemplate; 				
 ["vehiclesLightAPCs", ["CUP_B_LAV25_green", "CUP_B_LAV25M240_green"]] call _fnc_saveToTemplate;			
 ["vehiclesIFVs", []] call _fnc_saveToTemplate;				
 
@@ -107,13 +107,13 @@
 ["vehiclesGunBoats", ["CUP_B_RHIB2Turret_HIL"]] call _fnc_saveToTemplate; 			
 ["vehiclesAmphibious", ["CUP_B_M113_USA"]] call _fnc_saveToTemplate; 		
 
-["vehiclesPlanesCAS", ["CUP_B_JAS39_HIL"]] call _fnc_saveToTemplate; 		
+["vehiclesPlanesCAS", ["CUP_B_A10_DYN_USA"]] call _fnc_saveToTemplate; 		
 ["vehiclesPlanesAA", ["CUP_B_JAS39_HIL"]] call _fnc_saveToTemplate; 			
 ["vehiclesPlanesTransport", ["CUP_B_C130J_USMC"]] call _fnc_saveToTemplate; 	
 
-["vehiclesHelisLight", ["CUP_B_412_Mil_Transport_HIL"]] call _fnc_saveToTemplate; 		
-["vehiclesHelisTransport", ["CUP_B_AW159_Unarmed_HIL","CUP_B_CH47F_HIL", "CUP_B_CH47F_VIV_HIL"]] call _fnc_saveToTemplate; 	
-["vehiclesHelisAttack", ["CUP_B_AW159_HIL", "CUP_B_412_Military_Armed_HIL"]] call _fnc_saveToTemplate; 		
+["vehiclesHelisLight", ["CUP_B_AW159_HIL"]] call _fnc_saveToTemplate; 		
+["vehiclesHelisTransport", ["CUP_B_Mi171Sh_ACR"]] call _fnc_saveToTemplate; 	
+["vehiclesHelisAttack", ["CUP_B_Mi35_Dynamic_CZ_Tiger"]] call _fnc_saveToTemplate; 		
 
 ["vehiclesArtillery", [
 ["CUP_B_M270_HE_HIL",["CUP_12Rnd_MLRS_HE"]],
@@ -250,11 +250,11 @@ _loadoutData setVariable ["items_unarmed_extras", []];
 
 
 private _sfLoadoutData = _loadoutData call _fnc_copyLoadoutData; 
-_sfLoadoutData setVariable ["uniforms", ["CUP_U_CRYE_G3C_M81_US", "CUP_U_CRYE_G3C_M81_US_V2", "CUP_U_CRYE_G3C_M81_US_V3"]];			
-_sfLoadoutData setVariable ["vests", ["CUP_V_CPC_communications_rngr", "CUP_V_CPC_tl_rngr", "CUP_V_CPC_weapons_rngr", "CUP_V_CPC_communicationsbelt_rngr", "CUP_V_CPC_medical_rngr"]];				
-_sfLoadoutData setVariable ["Hvests", ["V_PlateCarrier2_rgr"]];
-_sfLoadoutData setVariable ["backpacks", ["B_Kitbag_sgg", "B_Kitbag_rgr", "B_Carryall_mcamo", "B_Carryall_oli", "B_AssaultPack_rgr"]];			
-_sfLoadoutData setVariable ["helmets", ["CUP_H_OpsCore_Green_SF", "CUP_H_OpsCore_Covered_MCAM_SF", "CUP_H_OpsCore_Spray_SF", "H_Booniehat_oli", "H_Bandanna_camo"]];				
+_sfLoadoutData setVariable ["uniforms", ["CUP_U_B_BDUv2_gloves_Winter"]];			
+_sfLoadoutData setVariable ["vests", ["CUP_V_PMC_CIRAS_Winter_TL"]];				
+_sfLoadoutData setVariable ["Hvests", ["CUP_V_PMC_CIRAS_Winter_TL"]];
+_sfLoadoutData setVariable ["backpacks", ["CUP_O_RUS_Patrol_bag_Winter"]];			
+_sfLoadoutData setVariable ["helmets", ["CUP_H_RUS_6B47_v2_Winter"]];				
 _sfLoadoutData setVariable ["binoculars", ["CUP_LRTV"]];
 _loadoutData setVariable ["ATLaunchers", ["CUP_launch_APILAS"]];  	
 
@@ -337,12 +337,12 @@ _sfLoadoutData setVariable ["sidearms", [
 /////////////////////////////////
 
 private _militaryLoadoutData = _loadoutData call _fnc_copyLoadoutData; 
-_militaryLoadoutData setVariable ["uniforms", ["CUP_U_B_HIL_ACU_TTS", "CUP_U_B_HIL_ACU_Rolled_TTS", "CUP_U_B_HIL_ACU_Rolled_Gloves_TTS", "CUP_U_B_HIL_ACU_Kneepad_TTS", "CUP_U_B_HIL_ACU_Gloves_TTS"]];		
-_militaryLoadoutData setVariable ["vests", ["CUP_V_PMC_CIRAS_OD_Patrol", "CUP_V_PMC_CIRAS_OD_Empty", "CUP_V_PMC_CIRAS_OD_TL"]];			
+_militaryLoadoutData setVariable ["uniforms", ["CUP_I_B_PMC_Unit_25"]];		
+_militaryLoadoutData setVariable ["vests", ["CUP_V_B_PASGT_winter"]];			
 _militaryLoadoutData setVariable ["Hvests", []];
-_militaryLoadoutData setVariable ["GLvests", ["CUP_V_PMC_CIRAS_OD_Grenadier"]];
-_militaryLoadoutData setVariable ["backpacks", ["CUP_B_TacticalPack_TTS", "B_Carryall_oli"]];		
-_militaryLoadoutData setVariable ["helmets", ["CUP_H_HIL_HelmetACH_TTS", "CUP_H_HIL_HelmetACH_ESS_Headset_TTS", "CUP_H_HIL_HelmetACH_GCovered_TTS", "CUP_H_HIL_HelmetACH_Headset_TTS", "CUP_H_Booniehat_TTS"]];		
+_militaryLoadoutData setVariable ["GLvests", ["CUP_V_B_PASGT_winter"]];
+_militaryLoadoutData setVariable ["backpacks", ["CUP_O_RUS_Patrol_bag_Winter"]];		
+_militaryLoadoutData setVariable ["helmets", ["CUP_H_PASGTv2_NVG_winter"]];		
 _militaryLoadoutData setVariable ["ATLaunchers", ["CUP_launch_BF3", "CUP_launch_HCPF3", "CUP_launch_PzF3"]];  	
 
 _militaryLoadoutData setVariable ["lightATLaunchers", [
@@ -391,12 +391,12 @@ _militaryLoadoutData setVariable ["sidearms", [
 //    Elite Loadout Data    //
 /////////////////////////////////
 private _eliteLoadoutData = _loadoutData call _fnc_copyLoadoutData; 
-_eliteLoadoutData setVariable ["uniforms", ["CUP_U_B_HIL_ACU_CCE", "CUP_U_B_HIL_ACU_Gloves_CCE", "CUP_U_B_HIL_ACU_Kneepad_CCE", "CUP_U_B_HIL_ACU_Kneepad_Gloves_CCE", "CUP_U_B_HIL_ACU_Kneepad_Rolled_CCE"]];		
-_eliteLoadoutData setVariable ["vests", ["CUP_V_CPC_communications_rngr", "CUP_V_CPC_Fast_rngr", "CUP_V_CPC_light_rngr", "CUP_V_CPC_medical_rngr", "CUP_V_CPC_tl_rngr", "CUP_V_CPC_communicationsbelt_rngr", "CUP_V_CPC_Fastbelt_rngr", "CUP_V_CPC_lightbelt_rngr", "CUP_V_CPC_medicalbelt_rngr", "CUP_V_CPC_tlbelt_rngr"]];			
+_eliteLoadoutData setVariable ["uniforms", ["CUP_U_O_RUS_Ratnik_Winter"]];		
+_eliteLoadoutData setVariable ["vests", ["CUP_Vest_RUS_6B45_Sh117_VOG_Full_BeigeDigital"]];			
 _eliteLoadoutData setVariable ["Hvests", []];
-_eliteLoadoutData setVariable ["GLvests", ["CUP_V_CPC_weaponsbelt_rngr"]];
-_eliteLoadoutData setVariable ["backpacks", ["B_Carryall_mcamo", "B_Kitbag_rgr"]];		
-_eliteLoadoutData setVariable ["helmets", ["H_HelmetSpecB", "H_HelmetSpecB_paint1", "H_HelmetSpecB_snakeskin"]];		
+_eliteLoadoutData setVariable ["GLvests", ["CUP_Vest_RUS_6B45_Sh117_VOG_Full_BeigeDigital"]];
+_eliteLoadoutData setVariable ["backpacks", ["CUP_O_RUS_Patrol_bag_Winter"]];		
+_eliteLoadoutData setVariable ["helmets", ["CUP_H_RUS_6B47_v2_GogglesDown_Winter"]];		
 _eliteLoadoutData setVariable ["binoculars", ["Laserdesignator"]];
 _eliteLoadoutData setVariable ["ATLaunchers", ["CUP_launch_APILAS"]];  	
 
@@ -472,19 +472,10 @@ _policeLoadoutData setVariable ["sidearms", ["hgun_Rook40_F"]];
 ////////////////////////////////
 
 private _militiaLoadoutData = _loadoutData call _fnc_copyLoadoutData; 
-_militiaLoadoutData setVariable ["uniforms", [
-	"CUP_U_B_BDUv2_OD", 
-	"CUP_U_B_BDUv2_dirty_OD", 
-	"CUP_U_B_BDUv2_gloves_OD", 
-	"CUP_U_B_BDUv2_roll2_OD", 
-	"CUP_U_B_BDUv2_roll2_gloves_dirty_OD", 
-	"CUP_U_B_BDUv2_roll_OD", 
-	"CUP_U_B_BDUv2_roll_gloves_OD", 
-	"CUP_U_B_BDUv2_roll_dirty_OD"
-]];		
-_militiaLoadoutData setVariable ["vests", ["CUP_V_B_ALICE", "CUP_V_B_PASGT_no_bags_OD", "CUP_V_B_PASGT_OD"]];			
-_militiaLoadoutData setVariable ["backpacks", ["B_FieldPack_oli"]];		
-_militiaLoadoutData setVariable ["helmets", ["CUP_H_USArmy_Helmet_M1_plain_M81", "CUP_H_USArmy_Helmet_M1_plain_Olive"]];		
+_militiaLoadoutData setVariable ["uniforms", ["CUP_U_B_CDF_SNW_1"]];		
+_militiaLoadoutData setVariable ["vests", ["CUP_V_CDF_6B3_1_SNW"]];			
+_militiaLoadoutData setVariable ["backpacks", ["CUP_O_RUS_Patrol_bag_Winter"]];		
+_militiaLoadoutData setVariable ["helmets", ["CUP_H_PMC_Beanie_Winter"]];		
 _militiaLoadoutData setVariable ["lightATLaunchers", [
 	["CUP_launch_MAAWS", "", "", "", ["MRAWS_HE_F", "MRAWS_HEAT55_F"], [], ""],
 	["CUP_launch_MAAWS", "", "", "CUP_optic_MAAWS_Scope", ["MRAWS_HEAT_F", "MRAWS_HEAT55_F"], [], ""],

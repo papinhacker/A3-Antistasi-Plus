@@ -75,7 +75,7 @@
 	]
 ] call _fnc_saveToTemplate; 			//this line determines civilian trucks -- Example: ["vehiclesCivIndustrial", ["C_Truck_02_transport_F"]] -- Array, can contain multiple assets
 
-["vehiclesCivHeli", ["not_supported"]] call _fnc_saveToTemplate; 			//this line determines civilian helis -- Example: ["vehiclesCivHeli", ["C_Heli_Light_01_civil_F"]] -- Array, can contain multiple assets
+["vehiclesCivHeli", ["CUP_C_MI6A_RU", "CUP_C_412", "CUP_C_SA330_Puma_HC1_ChernAvia"]] call _fnc_saveToTemplate; 			//this line determines civilian helis -- Example: ["vehiclesCivHeli", ["C_Heli_Light_01_civil_F"]] -- Array, can contain multiple assets
 
 ["vehiclesCivBoat", [
 	"CUP_C_Fishing_Boat_Chernarus", 1.0

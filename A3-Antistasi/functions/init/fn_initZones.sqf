@@ -214,6 +214,13 @@ switch (toLower worldName) do {
 		configClasses (configfile >> "CfgWorlds" >> worldName >> "Names");
 	};
 
+	case "fapovo": {
+		_cityConfigs = "(getText (_x >> ""type"") in [""NameLocal"", ""NameCityCapital"", ""NameCity"", ""NameVillage"", ""CityCenter""]) &&
+		!(getText (_x >> ""Name"") isEqualTo """") &&
+		!((configName _x) in [""abkotlina"",""absharkovo"",""airportbotana"",""airportivanograd"",""ammodump1"",""ammodump2"",""ammodump3"",""ammodump4"",""ammodump5"",""ammodump6"",""aris"",""batinac"",""border1"",""border2"",""bosco"",""c25"",""camp"",""campdamo"",""camprogla"",""castleserm"",""chudy"",""coyote"",""dam"",""dolsko"",""factory1"",""factory2"",""fobbelta"",""forge"",""gova"",""gralin"",""graltech"",""gypsy"",""hospital"",""islatera"",""islazora"",""kache"",""kalina"",""katamov"",""krugerlab"",""lablvl3"",""laguna"",""lakecasal"",""lakehlubosto"",""lakeledvinka"",""lakeossa"",""lakepitya"",""laura"",""lauramarin"",""lazina"",""lesnik"",""lightfoot"",""magnola"",""malinka"",""meteor"",""mikula"",""morana"",""mounttopkov"",""neboproboj"",""oilterminal"",""orlov"",""owl"",""ponorac"",""portfirka"",""portkruger"",""portrafina"",""prilov"",""prison1"",""prison2"",""radar"",""radar2"",""rangetiren"",""ranica"",""rasevac"",""ratun"",""sbp1"",""sbp2"",""school"",""sowinka"",""spooky"",""storage71"",""sunburra"",""sundial"",""suzevac"",""tf1"",""ufocamp"",""vetlan"",""villalamogny"",""vinkov"",""vukogrub"",""zappa"",""zborenov""])"
+		configClasses (configfile >> "CfgWorlds" >> worldName >> "Names");
+	};
+
 	default {
 		_cityConfigs = "(getText (_x >> ""type"") in [""NameCityCapital"", ""NameCity"", ""NameVillage"", ""CityCenter""]) &&
 		!(getText (_x >> ""Name"") isEqualTo """") &&
@@ -442,6 +449,12 @@ switch (toLower worldName) do {
 		_posBank = [];
 		_blackListPos = [11, 15, 17, 21, 24, 27];
 		antennas = [];
+	};
+	case "fapovo": {
+	    _posAntennas = [[1545.01,1281.36,0],[4480.4,630.022,0],[6954.71,956.928,0],[3985.23,2805.25,0],[3274.48,4027.16,0],[571.612,8022.82,0],[3543.1,8815.92,0],[8685.06,8518.59,0],[8548.13,6088.67,0],[9135.34,1900.7,0]];
+	    _posBank = [[1339.83,696.682,0],[3286.34,7526.13,0],[8833.91,1421.67,0.00890112],[7961.88,7462.49,0],[3194.47,1722.85,0]];
+		_blackListPos = [];
+	    antennas = [];
 	};
 	default {
 		antennas = nearestObjects [[worldSize /2, worldSize/2], _antennatypes, worldSize];
