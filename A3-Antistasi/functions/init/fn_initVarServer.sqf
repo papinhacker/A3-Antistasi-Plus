@@ -879,7 +879,7 @@ timer setVariable [vehCSATBoat,3,true];
 timer setVariable [vehNATOMRLS,0,true];
 timer setVariable [vehCSATMRLS,5,true];
 
-server setVariable [civCar,350,true];
+server setVariable [civCar,300,true];
 server setVariable [civTruck,700,true];
 server setVariable [civHeli, 5000,true];
 server setVariable [civBoat,200,true];
@@ -910,7 +910,7 @@ server setVariable [SDKMortar, 2000, true];
 if (!(shop_tank isEqualTo [])) then {
 	private _firstTank = shop_tank select 0;
 	if (!isNil "_firstTank") then {
-		server setVariable [_firstTank, 10500, true];
+		server setVariable [_firstTank, 12500, true];
 	};
 
 	private _secondTank = shop_tank select 1;
@@ -920,7 +920,7 @@ if (!(shop_tank isEqualTo [])) then {
 
 	private _thirdTank = shop_tank select 2;
 	if (!isNil "_thirdTank") then {
-		server setVariable [_thirdTank, 17500, true];
+		server setVariable [_thirdTank, 21500, true];
 	};
 };
 

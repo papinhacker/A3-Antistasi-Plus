@@ -2137,6 +2137,11 @@
         <Russian>Antistasi Стратис</Russian>
         <Chinesesimp>Antistasi Stratis</Chinesesimp>
       </Key>
+      <Key ID="STR_antistasi_mission_info_placeHolder">
+        <Original>Antistasi *Mapname*</Original>
+        <English>Antistasi *Mapname*</English>
+        <Russian>Antistasi *Картанейм*</Russian>
+      </Key>
       <Key ID="STR_antistasi_mission_info_stratis_mapname_text">
         <Original>Antistasi - Liberation of Stratis</Original>
         <English>Antistasi - Liberation of Stratis</English>

@@ -185,16 +185,16 @@ lootCrate = "Box_Syndicate_Ammo_F";
 rallyPoint = "B_RadioBag_01_wdl_F";
 
 //black market stuff
-shop_UAV = ["rhs_pchela1t_vvs"];
-shop_AA = ["rhsgref_cdf_zsu234", "rhsgref_cdf_zsu234", "I_LT_01_AA_F"];
+shop_UAV = ["rhs_pchela1t_vvs", "B_UAV_02_dynamicLoadout_F"];
+shop_AA = ["rhsgref_cdf_zsu234", "I_LT_01_AA_F", "O_APC_Tracked_02_AA_F"];
 shop_MRAP = ["rhsgref_BRDM2UM_ins_g", "rhsgref_BRDM2_ins_g", "rhsusf_M1117_O"];
-shop_wheel_apc = ["rhsgref_ins_g_btr60", "rhsgref_nat_btr70", "rhs_btr80a_vmf"];
-shop_track_apc = ["rhsgref_hidf_m113a3_m2", "rhsgref_cdf_bmd1k", "rhsgref_cdf_bmp2e"];
-shop_heli = ["rhs_uh1h_hidf_gunship", "rhsgref_cdf_reg_Mi17Sh"];
-shop_tank = ["rhsgref_ins_g_t72ba", "rhsgref_ins_g_t72bb", "rhsgref_ins_g_t72bc"];
-shop_plane = ["RHSGREF_A29B_HIDF", "rhs_l39_cdf", "rhs_l159_CDF"];
+shop_wheel_apc = ["rhsgref_nat_btr70", "rhs_btr80_msv", "rhs_btr80a_msv"];
+shop_track_apc = ["rhsusf_m113_usarmy", "rhs_bmp2d_vdv", "rhs_bmd2m", "rhs_bmp3mera_msv"];
+shop_heli = ["rhs_uh1h_hidf_gunship", "RHS_Mi24P_vvs", "RHS_UH1Y", "RHS_Ka52_vvsc", "rhs_mi28n_vvs", "rhsgref_mi24g_CAS"];
+shop_tank = ["rhs_t90_tv", "rhs_t90a_tv", "rhs_t90sm_tv"];
+shop_plane = ["RHSGREF_A29B_HIDF", "rhs_l39_cdf", "RHS_Su25SM_vvs", "rhs_mig29s_vvs"];
 
-additionalShopLight = ["rhssaf_m1151_olive_pkm", "rhssaf_m1025_olive_m2", "rhs_tigr_sts_vmf"];
+additionalShopLight = ["rhssaf_m1151_olive_pkm", "rhssaf_m1025_olive_m2", "rhs_tigr_sts_vmf", "rhsusf_m1165a1_gmv_m134d_m240_socom_d"];
 additionalShopAtgmVehicles = ["rhsusf_m1045_w", "rhsusf_m1045_w", "rhsgref_BRDM2_ATGM"];
 additionalShopManpadsVehicles = [];
 additionalShopArtillery = [];
