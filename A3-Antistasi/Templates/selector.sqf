@@ -56,11 +56,11 @@ A3A_Reb_template = switch(true) do {
     case (A3A_hasRHS): {
         switch(true) do {
             case (_terrainName in tropicalMaps): {
-                ["Templates\NewTemplates\RHS\RHS_Reb_SDK.sqf", independent] call A3A_fnc_compatibilityLoadFaction;
+                ["Templates\NewTemplates\RHS\RHS_Reb_FIA_Arid.sqf", independent] call A3A_fnc_compatibilityLoadFaction;
                 [2, "Using SDK Template", _filename] call A3A_fnc_log;
             };
             case (_terrainName in _temperateMaps): {
-                ["Templates\NewTemplates\RHS\RHS_Reb_NAPA_Temperate.sqf", independent] call A3A_fnc_compatibilityLoadFaction;
+                ["Templates\NewTemplates\RHS\RHS_Reb_FIA_Arid.sqf", independent] call A3A_fnc_compatibilityLoadFaction;
                 [2, "Using Temperate Napa Template", _filename] call A3A_fnc_log;
             };
             default {

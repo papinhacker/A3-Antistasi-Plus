@@ -96,6 +96,11 @@
 ///////////////////////////
 
 ["uniforms", [
+    "rhs_uniform_gorka_r_y",
+	"rhs_uniform_gorka_r_y_gloves",
+	"rhs_uniform_gorka_1_a",
+	"rhs_uniform_gorka_1_b",
+	"rhs_uniform_vkpo_gloves",
     "U_IG_Guerilla1_1",
     "U_IG_Guerilla2_1",
     "U_IG_Guerilla2_2",

@@ -7258,6 +7258,11 @@ class cfgHALsStore
 			ITEM(rhs_weap_ak74_2, 525, RIFLE_STOCK);
 			ITEM(rhs_weap_ak74_3, 550, RIFLE_STOCK);
 			ITEM(rhs_weap_ak74_gp25, 650, RIFLE_STOCK);
+			ITEM(rhs_weap_ak74mr, 850, RIFLE_STOCK);
+			ITEM(rhs_weap_ak74mr_gp25, 875 RIFLE_STOCK);
+			ITEM(rhs_weap_ak74m_zenitco01, 675, RIFLE_STOCK);
+            ITEM(rhs_weap_ak74m_zenitco01_b33, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_ak74m, 550, RIFLE_STOCK);
 
 			ITEM(rhs_weap_ak105, 700, RIFLE_STOCK);
 			ITEM(rhs_weap_ak105_zenitco01, 750, RIFLE_STOCK);
@@ -7564,7 +7569,9 @@ class cfgHALsStore
 			ITEM(rhs_acc_dtk4long, 200, MZ_STOCK);
 			ITEM(rhs_acc_dtk4screws, 200, MZ_STOCK);
 			ITEM(rhs_acc_pbs1, 200, MZ_STOCK);
-
+            ITEM(rhs_acc_tgpa, 100, MZ_STOCK);
+			ITEM(rhs_acc_dtk4short, 75 MZ_STOCK);
+			
 			ITEM(rhsusf_acc_M2010S, 350, MZ_STOCK);
 			ITEM(rhsusf_acc_M2010S_d, 350, MZ_STOCK);
 			ITEM(rhsusf_acc_M2010S_wd, 350, MZ_STOCK);
@@ -7731,11 +7738,18 @@ class cfgHALsStore
 				price = 1600;
 				stock = 100;
 			};
+		    class FHQ_optic_AC11704 {
+			    price = 350;				
+				stock = 200;				
+			};	
+            class FHQ_optic_AC11704_tan {
+				price = 350
+				stock = 200
+			};		    
 			class rhsusf_acc_premier {
 				price = 1000;
 				stock = 100;
 			};
-
 			class rhsusf_acc_LEUPOLDMK4 {
 				price = 900;
 				stock = 100;
@@ -7970,6 +7984,7 @@ class cfgHALsStore
 			ITEM(rhs_mag_m714_White, 30, MZ_STOCK);
 			ITEM(rhs_mag_m716_yellow, 30, MZ_STOCK);
 
+            ITEM(rhs_VG40TB, 50, MZ_STOCK);
 			ITEM(rhs_VOG25, 35, MZ_STOCK);
 			ITEM(rhs_VG40TB, 125, MZ_STOCK);
 			ITEM(rhs_VOG25P, 65, MZ_STOCK);
@@ -8800,16 +8815,82 @@ class cfgHALsStore
 		{
 			displayName = "Misc";
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\backpack_ca.paa";
-			ITEM(B_Bergen_mcamo_F, 900, MISC_STOCK);
-			ITEM(B_Bergen_tna_F, 900, MISC_STOCK);
-			ITEM(rhsgref_hidf_alicepack, 750, MISC_STOCK);
-			ITEM(rhsgref_ttsko_alicepack, 750, MISC_STOCK);
-			ITEM(rhsgref_wdl_alicepack, 750, MISC_STOCK);
-			ITEM(rhssaf_alice_md2camo, 750, MISC_STOCK);
-			ITEM(rhssaf_alice_smb, 750, MISC_STOCK);
-			ITEM(U_I_FullGhillie_lsh, 1000, MISC_STOCK);
-			ITEM(U_I_FullGhillie_ard, 1000, MISC_STOCK);
-			ITEM(U_I_FullGhillie_sard, 1000, MISC_STOCK);
+			ITEM(B_Bergen_mcamo_F, 600, MISC_STOCK);
+			ITEM(B_Bergen_tna_F, 600, MISC_STOCK);
+			ITEM(rhssaf_kitbag_digital, 375, MISC_STOCK);
+			ITEM(rhssaf_kitbag_md2camo, 375, MISC_STOCK);
+			ITEM(rhssaf_Kitbag_smb_std_hk416, 375, MISC_STOCK);
+			ITEM(B_Kitbag_tan, 375, MISC_STOCK);
+			ITEM(B_Carryall_mcamo, 480, MISC_STOCK);
+			ITEM(B_Carryall_cbr, 480, MISC_STOCK);
+			ITEM(B_Carryall_wdl_F, 480, MISC_STOCK);
+			ITEM(B_Carryall_taiga_F, 480, MISC_STOCK);
+			ITEM(B_Carryall_oucamo, 480, MISC_STOCK);
+			ITEM(rhsgref_tortila_specter, 480, MISC_STOCK);
+			ITEM(rhs_tortila_black, 480, MISC_STOCK);
+			ITEM(rhs_tortila_emr, 480, MISC_STOCK);
+			ITEM(rhs_tortila_grey, 480, MISC_STOCK);
+			ITEM(rhs_tortila_khaki, 480, MISC_STOCK);
+			ITEM(rhs_tortila_olive, 480, MISC_STOCK);
+			ITEM(rhs_rk_sht_30_emr, 300, MISC_STOCK);
+			ITEM(rhs_rk_sht_30_emr_engineer_empty, 300, MISC_STOCK);
+			ITEM(rhs_rk_sht_30_olive, 300, MISC_STOCK);
+			ITEM(rhs_rk_sht_30_olive_engineer_empty, 300, MISC_STOCK);
+			ITEM(B_FieldPack_cbr, 150, MISC_STOCK);
+			ITEM(B_FieldPack_blk, 150, MISC_STOCK);
+			ITEM(B_FieldPack_ocamo, 150, MISC_STOCK);
+			ITEM(rhsgref_hidf_alicepack, 550, MISC_STOCK);
+			ITEM(rhsgref_ttsko_alicepack, 550, MISC_STOCK);
+			ITEM(rhsgref_wdl_alicepack, 550, MISC_STOCK);
+			ITEM(rhs_6b13_Flora_6sh92_vog, 580, MISC_STOCK);
+			ITEM(rhs_6b23_6sh92_vog_headset, 550, MISC_STOCK);
+			ITEM(rhs_6b23_6sh92_radio, 545, MISC_STOCK);
+			ITEM(rhs_6b23_digi_6sh92_Vog_Radio_Spetsnaz, 550, MISC_STOCK);
+			ITEM(rhs_6b23_digi_6sh92_headset_spetsnaz, 550, MISC_STOCK);
+			ITEM(rhs_6b23_digi_6sh92_Spetsnaz, 545, MISC_STOCK);
+			ITEM(rhs_6b23_ML_6sh92_vog_headset, 545, MISC_STOCK);
+			ITEM(rhs_6b23_ML_6sh92_headset_mapcase, 545, MISC_STOCK);
+			ITEM(rhs_6b23_6sh116, 540, MISC_STOCK);
+			ITEM(rhs_6b23_6sh116_vog, 540, MISC_STOCK);
+			ITEM(rhs_6b23_digi_6sh92_vog, 540, MISC_STOCK);
+			ITEM(rhs_6b23_digi_6sh92_vog_headset, 540, MISC_STOCK);
+			ITEM(rhs_6b13_6sh92_vog, 550, MISC_STOCK);
+			ITEM(rhs_6b13_EMR_6sh92_vog, 550, MISC_STOCK);
+			ITEM(rhs_6b23_digi_6sh92_Vog_Spetsnaz, 550, MISC_STOCK);
+			ITEM(rhssaf_alice_md2camo, 550, MISC_STOCK);
+			ITEM(rhssaf_alice_smb, 550, MISC_STOCK);
+			ITEM(rhs_6b27m_green_bala, 150, MISC_STOCK);
+			ITEM(rhs_6b27m_green, 150, MISC_STOCK);
+			ITEM(rhs_6b27m_ml_bala, 150, MISC_STOCK);
+			ITEM(rhs_6b27m_ML_ess_bala, 150, MISC_STOCK);
+			ITEM(rhs_6b27m_ml_ess, 150, MISC_STOCK);
+			ITEM(rhs_6b27m_digi_ess, 150, MISC_STOCK);
+			ITEM(rhs_6b47, 150, MISC_STOCK);
+			ITEM(rhs_6b47_6m2_1, 150, MISC_STOCK);
+			ITEM(rhs_6b47_6B50, 150, MISC_STOCK);
+			ITEM(rhs_6b7_1m_bala2_emr, 150, MISC_STOCK);
+			ITEM(rhs_6b7_1m_bala2, 150, MISC_STOCK);
+			ITEM(rhs_6b7_1m_olive, 150, MISC_STOCK);
+			ITEM(rhs_6b7_1m_bala2_olive, 150, MISC_STOCK);
+			ITEM(rhs_6b7_1m_bala2_flora, 150, MISC_STOCK);
+			ITEM(rhs_altyn_visordown, 155, MISC_STOCK);
+			ITEM(rhs_altyn, 155, MISC_STOCK);
+			ITEM(rhs_altyn_novisor_bala, 155 MISC_STOCK);
+			ITEM(rhsusf_opscore_ut_pelt_cam, 175, MISC_STOCK);
+			ITEM(rhsusf_ihadss, 300, MISC_STOCK);
+		    ITEM(RHS_jetpilot_usaf, 200, MISC_STOCK);
+			ITEM(rhsusf_iotv_ocp_Grenadier, 600, MISC_STOCK);
+			ITEM(rhsusf_iotv_ucp_Grenadier, 600, MISC_STOCK);
+			ITEM(rhsusf_iotv_ocp_SAW, 600, MISC_STOCK);
+			ITEM(rhsusf_iotv_ocp_Squadleader, 600, MISC_STOCK);
+			ITEM(rhsusf_iotv_ucp_Squadleader, 600, MISC_STOCK);
+			ITEM(rhsusf_iotv_ocp_Teamleader, 600, MISC_STOCK);
+			ITEM(rhsusf_iotv_ucp_Teamleader, 600, MISC_STOCK);
+			ITEM(rhsusf_spc_teamleader, 585, MISC_STOCK);
+			ITEM(rhs_6b45_mg, 475, MISC_STOCK);
+			ITEM(U_I_FullGhillie_lsh, 800, MISC_STOCK);
+			ITEM(U_I_FullGhillie_ard, 800, MISC_STOCK);
+			ITEM(U_I_FullGhillie_sard, 800, MISC_STOCK);
 		
 			ITEM(IEDUrbanSmall_Remote_Mag, 500, MISC_STOCK);
 			ITEM(IEDLandSmall_Remote_Mag, 500, MISC_STOCK);
