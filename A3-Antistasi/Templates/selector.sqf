@@ -111,7 +111,7 @@ A3A_Reb_template = switch(true) do {
                 [2, "Using temperate FIA Template", _filename] call A3A_fnc_log;
             };
             default {
-                ["Templates\NewTemplates\Vanilla\Greek_Reb.sqf", independent] call A3A_fnc_compatibilityLoadFaction;
+                ["Templates\NewTemplates\Vanilla\Vanilla_Reb_FIA_Arid.sqf", independent] call A3A_fnc_compatibilityLoadFaction;
                 [2, "Using arid FIA Templates", _filename] call A3A_fnc_log;
             };
         };
@@ -260,7 +260,7 @@ A3A_Occ_template = switch(true) do {
                 [2, "Using temperate NATO Template", _filename] call A3A_fnc_log;
             };
             default {
-                ["Templates\NewTemplates\Vanilla\Greek_AI.sqf", west] call A3A_fnc_compatibilityLoadFaction;
+                ["Templates\NewTemplates\Vanilla\Vanilla_AI_NATO_Arid.sqf", west] call A3A_fnc_compatibilityLoadFaction;
                 [2, "Using arid NATO Template", _filename] call A3A_fnc_log;
             };
         };
