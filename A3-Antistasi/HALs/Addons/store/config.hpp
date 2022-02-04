@@ -7986,7 +7986,6 @@ class cfgHALsStore
 
             ITEM(rhs_VG40TB, 50, MZ_STOCK);
 			ITEM(rhs_VOG25, 35, MZ_STOCK);
-			ITEM(rhs_VG40TB, 125, MZ_STOCK);
 			ITEM(rhs_VOG25P, 65, MZ_STOCK);
 			ITEM(rhs_VG40SZ, 125, MZ_STOCK);
 			ITEM(rhs_GDM40, 50, MZ_STOCK);
