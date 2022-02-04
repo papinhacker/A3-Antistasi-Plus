@@ -882,7 +882,7 @@ timer setVariable [vehCSATMRLS,5,true];
 server setVariable [civCar,300,true];
 server setVariable [civTruck,700,true];
 server setVariable [civHeli, 5000,true];
-server setVariable [civBoat,200,true];
+server setVariable [civBoat,10000,true];
 server setVariable [vehSDKBike, 100, true];
 server setVariable [vehSDKLightUnarmed,200,true];
 server setVariable [vehSDKTruck,300,true];

@@ -26,7 +26,7 @@
 ["vehicleCivCar", "C_Offroad_01_F"] call _fnc_saveToTemplate;
 ["vehicleCivTruck", "RHS_Ural_Open_Civ_03"] call _fnc_saveToTemplate;
 ["vehicleCivHeli", "RHS_Mi8t_civilian"] call _fnc_saveToTemplate;
-["vehicleCivBoat", "C_Rubberboat"] call _fnc_saveToTemplate;
+["vehicleCivBoat", "OWP_MI26cg"] call _fnc_saveToTemplate;
 ["vehicleCivSupply", "C_Van_01_box_F"] call _fnc_saveToTemplate;
 
 ["staticMG", "rhsgref_ins_DSHKM"] call _fnc_saveToTemplate;
@@ -146,18 +146,18 @@
 ]] call _fnc_saveToTemplate;
 
 private _initialRebelEquipment = [
-"rhs_weap_m3a1", "rhs_weap_m38",
+"rhs_weap_scorpion", "rhs_weap_m38",
 "rhs_weap_type94_new","rhs_weap_tt33","rhs_weap_Izh18","rhs_weap_kar98k",
 "rhs_weap_panzerfaust60",
 "rhs_mag_6x8mm_mhp","rhs_mag_762x25_8","rhsgref_1Rnd_00Buck","rhsgref_1Rnd_Slug","rhsgref_5Rnd_792x57_kar98k",
 "rhsgref_mag_rkg3em",
-"rhsgref_30rnd_1143x23_M1911B_SMG", "rhsgref_30rnd_1143x23_M1T_SMG",
+"rhsgref_10rnd_765x17_vz61",
 "rhsgref_5Rnd_762x54_m38",
-"rhs_sidor",
+"rhs_sidor", "V_LegStrapBag_coyote_F",
 "rhs_grenade_nbhgr39_mag", "rhs_grenade_sthgr24_mag", "rhs_grenade_sthgr43_mag",
 "rhs_grenade_khattabka_vog17_mag", "rhs_grenade_khattabka_vog25_mag",
 "rhs_vest_pistol_holster","rhs_vest_commander","rhs_6sh46",
-"rhs_acc_2dpZenit","Binocular","Laserbatteries"];
+"rhs_acc_2dpZenit","Binocular","Laserbatteries", "murshun_cigs_cigpack", "murshun_cigs_lighter", "immersion_pops_poppack", "murshun_cigs_matches"];
 if (A3A_hasTFAR) then {_initialRebelEquipment append ["tf_microdagr","tf_anprc154"]};
 if (A3A_hasTFAR && startWithLongRangeRadio) then {_initialRebelEquipment pushBack "tf_anprc155_coyote"};
 if (A3A_hasTFARBeta) then {_initialRebelEquipment append ["TFAR_microdagr","TFAR_anprc154"]};

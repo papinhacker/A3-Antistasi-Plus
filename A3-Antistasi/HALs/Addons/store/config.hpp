@@ -7107,29 +7107,29 @@ class cfgHALsStore
 			displayName = "Launchers";
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\secondaryWeapon_ca.paa";
 
-			ITEM(rhs_weap_rpg26, 200, 50);
-			ITEM(rhs_weap_rshg2, 200, 50);
-			ITEM(rhs_weap_rpg75, 175, 50);
+			ITEM(rhs_weap_rpg26, 200, 5000);
+			ITEM(rhs_weap_rshg2, 200, 5000);
+			ITEM(rhs_weap_rpg75, 175, 5000);
 
-			ITEM(rhs_weap_m80, 250, 50);
+			ITEM(rhs_weap_m80, 250, 5000);
 
-			ITEM(rhs_weap_m72a7, 300, 50);
+			ITEM(rhs_weap_m72a7, 300, 5000);
 
-			ITEM(rhs_weap_M136, 400, 50);
-			ITEM(rhs_weap_M136_hedp, 500, 50);
-			ITEM(rhs_weap_M136_hp, 500, 50);
+			ITEM(rhs_weap_M136, 400, 5000);
+			ITEM(rhs_weap_M136_hedp, 500, 5000);
+			ITEM(rhs_weap_M136_hp, 500, 5000);
 
-			ITEM(rhs_weap_rpg7, 750, 15);
+			ITEM(rhs_weap_rpg7, 750, 1500);
 
-			ITEM(rhs_weap_maaws, 1300, 15);
+			ITEM(rhs_weap_maaws, 1300, 1500);
 
-			ITEM(rhs_weap_igla, 1300, 50);
-			ITEM(rhs_weap_fim92, 1600, 50);
+			ITEM(rhs_weap_igla, 1300, 5000);
+			ITEM(rhs_weap_fim92, 1600, 5000);
 
-			ITEM(rhs_weap_smaw, 1500, 15);
-			ITEM(rhs_weap_smaw_green, 1500, 15);
+			ITEM(rhs_weap_smaw, 1500, 1500);
+			ITEM(rhs_weap_smaw_green, 1500, 1500);
 
-			ITEM(rhs_weap_fgm148, 6000, 10);
+			ITEM(rhs_weap_fgm148, 6000, 1000);
 		};
 
 		class launcherMagazinesRhs 
@@ -7139,62 +7139,62 @@ class cfgHALsStore
 		
 			class rhs_rpg7_PG7V_mag {
 				price = 75;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_rpg7_PG7VM_mag {
 				price = 100;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_rpg7_PG7VS_mag {
 				price = 150;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_rpg7_PG7VL_mag {
 				price = 250;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_rpg7_PG7VR_mag {
 				price = 300;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_rpg7_TBG7V_mag {
 				price = 300;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_rpg7_OG7V_mag {
 				price = 150;
-				stock = 50;
+				stock = 5000;
 			};
 
 			class rhs_mag_maaws_HEAT {
 				price = 250;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_mag_maaws_HEDP {
 				price = 350;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_mag_maaws_HE {
 				price = 200;
-				stock = 50;
+				stock = 5000;
 			};
 
 			class rhs_mag_smaw_SR {
 				price = 100;
-				stock = 500;
+				stock = 5000;
 			};
 			class rhs_mag_smaw_HEAA {
 				price = 250;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_mag_smaw_HEDP {
 				price = 350;
-				stock = 50;
+				stock = 5000;
 			};
 
 			class rhs_fgm148_magazine_AT {
 				price = 1000;
-				stock = 50;
+				stock = 5000;
 			};
 		};
 
@@ -7611,15 +7611,15 @@ class cfgHALsStore
 			};
 			class rhs_acc_pgo7v {
 				price = 500;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_pgo7v2 {
 				price = 525;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_pgo7v3 {
 				price = 550;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhs_optic_maaws {
