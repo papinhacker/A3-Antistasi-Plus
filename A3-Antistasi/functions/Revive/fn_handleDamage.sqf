@@ -4,34 +4,53 @@ params ["_unit","_part","_damage","_injurer","_projectile","_hitIndex","_instiga
 
 // Functionality unrelated to Antistasi revive
 // Helmet popping: use _hitpoint rather than _part to work around ACE calling its fake hitpoint "head"
-if (_damage >= 1 && {_hitPoint == "hithead"}) then
+if
+(
+	!A3A_hasPIRMedical
+	&& { _damage >= 1
+	&& { _hitPoint == "hithead"
+	&& { random 100 < helmetLossChance }}}
+)
+then
 {
-	if (random 100 < helmetLossChance) then
-	{
-		removeHeadgear _unit;
-	};
+	removeHeadgear _unit;
 };
 
 if (_part == "" && _damage > 0.1) then
 {
 	// this will not work the same with ACE, as damage isn't accumulated
-	if (!isPlayer (leader group _unit) && dam < 1.0) then
+	if
+	(
+		!isPlayer (leader (group _unit))
+		&& { dam < 1.0
+		&& { !A3A_hasLAMBS
+		&& { _damage > 0.6 }}}
+	)
+	then
 	{
-		if (_damage > 0.6) then {[_unit,_injurer] spawn A3A_fnc_unitGetToCover};
+		[_unit, _injurer] spawn A3A_fnc_unitGetToCover;
 	};
 
 	// Contact report generation for rebels
-	if (side group _injurer == Occupants or side group _injurer == Invaders) then
+	if (side (group _injurer) == Occupants || { side (group _injurer) == Invaders })
+	then
 	{
 		// Check if unit is part of a rebel garrison
 		private _marker = _unit getVariable ["markerX",""];
-		if (_marker != "" && {sidesX getVariable [_marker,sideUnknown] == teamPlayer}) then
+
+		if (_marker != "" && { sidesX getVariable [_marker, sideUnknown] == teamPlayer })
+		then
 		{
 			// Limit last attack var changes and task updates to once per 30 seconds
 			private _lastAttackTime = garrison getVariable [_marker + "_lastAttack", -30];
-			if (_lastAttackTime + 30 < serverTime) then {
+
+			if (_lastAttackTime + 30 < serverTime)
+			then
+			{
 				garrison setVariable [_marker + "_lastAttack", serverTime, true];
-				[_marker, side group _injurer, side group _unit] remoteExec ["A3A_fnc_underAttack", 2];
+
+				[_marker, side (group _injurer), side (group _unit)]
+					remoteExec ["A3A_fnc_underAttack", 2];
 			};
 		};
 	};
@@ -40,7 +59,9 @@ if (_part == "" && _damage > 0.1) then
 
 // Let ACE medical handle the rest (inc return value) if it's running
 if (A3A_hasACEMedical) exitWith {};
+if (A3A_hasPIRMedical) exitWith {};
 
+// -----------------------------------------------------------------------------
 
 private _makeUnconscious =
 {
