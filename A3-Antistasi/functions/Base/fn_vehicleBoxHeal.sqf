@@ -25,39 +25,92 @@ PIRUnitFullHeal =
 {
     params ["_unit"];
 
+    // _unit setVariable ["dam_player_krovstoit0", true, true];
+    // _unit setVariable ["dam_uncondition_injured0", true, true];
+    // _unit setVariable ["dam_conec_istorii0", true, true];
+    // _unit setDamage 0;
+
+    // if (lifeState _unit == "INCAPACITATED")
+    // then
+    // {
+    //     _unit setUnconscious false;
+    //     [_unit,"UnconsciousOutProne"] remoteExecCall ["switchMove", 0];
+    // };
+
+    // [
+    //     {
+    //         params ["_unit"];
+    //         _unit setVariable ["dam_ignore_CountTimeEffect0", 0, true];
+    //         _unit setVariable ["dam_ignore_HealEffect0", 24, true];
+    //     },
+    //     [_unit],
+    //     2
+    // ] call CBA_fnc_waitAndExecute;
+
+    // _unit setVariable ["dam_ignore_CountPlayerList0", [], true];
+    // _unit setVariable ["dam_ignore_CountPlayerEffect0", 0, true];
+    // _unit setVariable ["dam_ignore_Apteka0", 0, true];
+
+    // [
+    //     {
+    //         params ["_unit"];
+    //         _unit setVariable ["dam_player_lecit0", false, true];
+    //     },
+    //     [_unit],
+    //     2
+    // ] call CBA_fnc_waitAndExecute;
+
+
+
+
+
+
+    _unit setVariable ["dam_dihanie_statys", 1, true];
+    _unit setVariable ["dam_puls_statys", 1, true];
+    _unit setVariable ["dam_krov_statys", 5, true];
+
+    switch (gestureState _unit) do
+    {
+        case "pir_medic_uncondition_1":
+            {[_unit, "PiR_medic_uncondition_1_out" ] remoteExecCall [ "playAction", _unit];};
+        case "pir_medic_uncondition_2":
+            {[_unit, "PiR_medic_uncondition_2_out" ] remoteExecCall [ "playAction", _unit];};
+        case "pir_medic_uncondition_3":
+            {[_unit, "PiR_medic_uncondition_3_out" ] remoteExecCall [ "playAction", _unit];};
+        case "pir_medic_uncondition_4":
+            {[_unit, "PiR_medic_uncondition_4_out" ] remoteExecCall [ "playAction", _unit];};
+        case "pir_medic_uncondition_5":
+            {[_unit, "PiR_medic_uncondition_5_out" ] remoteExecCall [ "playAction", _unit];};
+        case "pir_medic_uncondition_6":
+            {[_unit, "PiR_medic_uncondition_6_out" ] remoteExecCall [ "playAction", _unit];};
+    };
+
     _unit setVariable ["dam_player_krovstoit0", true, true];
     _unit setVariable ["dam_uncondition_injured0", true, true];
+    [ _unit, false ] remoteExecCall [ "setUnconscious", _unit ];
     _unit setVariable ["dam_conec_istorii0", true, true];
-    _unit setDamage 0;
-
-    if (lifeState _unit == "INCAPACITATED")
-    then
-    {
-        _unit setUnconscious false;
-        [_unit,"UnconsciousOutProne"] remoteExecCall ["switchMove", 0];
-    };
+    [_unit, "UnconsciousOutProne"] remoteExecCall ["switchMove", 0];
 
     [
         {
             params ["_unit"];
             _unit setVariable ["dam_ignore_CountTimeEffect0", 0, true];
-            _unit setVariable ["dam_ignore_HealEffect0", 24, true];
+            _unit setVariable ["dam_ignore_HealEffect0", (24 - round ((damage _unit) * 24)), true];
         },
-        [_unit],
-        2
+        [_unit], 2
     ] call CBA_fnc_waitAndExecute;
 
-    _unit setVariable ["dam_ignore_CountPlayerList0", [], true];
-    _unit setVariable ["dam_ignore_CountPlayerEffect0", 0, true];
-    _unit setVariable ["dam_ignore_Apteka0", 0, true];
+
+    _unit setVariable ["dam_ignore_CountPlayerList0", [] ,true];
+    _unit setVariable ["dam_ignore_CountPlayerEffect0", 0 ,true];
+    _unit setVariable ["dam_ignore_Apteka0", 0,true];
 
     [
         {
             params ["_unit"];
-            _unit setVariable ["dam_player_lecit0", false, true];
+            _unit setVariable ["dam_player_lecit0",false,true];
         },
-        [_unit],
-        2
+        [_unit], 2
     ] call CBA_fnc_waitAndExecute;
 };
 
