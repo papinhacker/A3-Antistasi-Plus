@@ -90,11 +90,13 @@ A3A_loadedTemplateInfoXML = [];
 A3A_hasTFAR = isClass (configFile >> "CfgPatches" >> "task_force_radio");
 A3A_hasACRE = isClass (configFile >> "cfgPatches" >> "acre_main");
 A3A_hasTFARBeta = isClass (configFile >> "CfgPatches" >> "tfar_static_radios");
-if (A3A_hasTFARBeta) then {A3A_hasTFAR = false};
+if (A3A_hasTFARBeta) then { A3A_hasTFAR = false; };
 //ACE Detection
-A3A_hasACE = (!isNil "ace_common_fnc_isModLoaded");
+A3A_hasACE = !(isNil "ace_common_fnc_isModLoaded");
 A3A_hasACEHearing = isClass (configFile >> "CfgSounds" >> "ACE_EarRinging_Weak");
 A3A_hasACEMedical = isClass (configFile >> "CfgSounds" >> "ACE_heartbeat_fast_3");
+A3A_hasPIRMedical = isClass (configFile >> "PIR_medical_menu");
+A3A_hasLAMBS = isClass (configFile >> "lambs_main_Display");
 //Content Mods (Units, Vehicles, Weapons, Clothes etc.)
 //These are handled by a script in the Templates folder to keep integrators away from critical code.
 call compile preProcessFileLineNumbers "Templates\detector.sqf";
@@ -102,7 +104,7 @@ call compile preProcessFileLineNumbers "Templates\detector.sqf";
 ////////////////////////////////////
 //        BUILDINGS LISTS        ///
 ////////////////////////////////////
-[2,"Creating building arrays",_fileName] call A3A_fnc_log;
+[2, "Creating building arrays", _fileName] call A3A_fnc_log;
 
 listMilBld = [
 	"Land_Cargo_Tower_V1_F",
@@ -213,7 +215,7 @@ listMilBld = [
 	"Land_fortified_nest_big_EP1",
 	"Land_fortified_nest_big",
 	"Land_BagBunker_01_large_green_F",
-	"Land_GuardTower_01_F", 
+	"Land_GuardTower_01_F",
 	"Land_vn_guardtower_01_f",
 	"Land_vn_bunker_small_01",
 	"Land_vn_bunker_big_01"

@@ -79,7 +79,7 @@ true;
 All other public variables referenced:
 | Name              | Type          | Machine   | Domain            | Description                                                           |
 |-------------------|---------------|-----------|-------------------|-----------------------------------------------------------------------|
-| A3A_hasACE            | BOOLEAN       | Public    | missionNamespace  | If ACE is loaded.                                                     |
+| A3A_hasACE        | BOOLEAN       | Public    | missionNamespace  | If ACE is loaded.                                                     |
 | tkPunish          | BOOLEAN       | Public    | missionNamespace  | Parameter. If the FF system should be enabled.                        |
 | petros            | OBJECT        | Public    | missionNamespace  | AI that rebels need to protect and access.                            |
 | posHQ             | POS3D<AGL>    | Public    | missionNamespace  | getMarkerPos respawnTeamPlayer. The position of the HQ marker.        |

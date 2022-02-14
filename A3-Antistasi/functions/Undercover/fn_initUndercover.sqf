@@ -1,13 +1,14 @@
 //Attempt to figure out our current ace medical target;
-if (A3A_hasACE) then {
-currentAceTarget = objNull;
-	["ace_interactMenuOpened", {
-		//player setVariable ["lastMenuOpened", "INTERACT"];
-		currentAceTarget = ace_interact_menu_selectedTarget;
-	}] call CBA_fnc_addEventHandler;
+if !A3A_hasACE exitWith {};
 
-	["ace_medicalMenuOpened", {
-		//player setVariable ["lastMenuOpened", "MEDICAL"];
-		currentAceTarget = param [1];
-	}] call CBA_fnc_addEventHandler;
-};
+currentAceTarget = objNull;
+
+[
+	"ace_interactMenuOpened",
+	{ currentAceTarget = ace_interact_menu_selectedTarget; }
+] call CBA_fnc_addEventHandler;
+
+[
+	"ace_medicalMenuOpened",
+	{ currentAceTarget = param [1]; }
+] call CBA_fnc_addEventHandler;

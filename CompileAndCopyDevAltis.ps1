@@ -1,6 +1,7 @@
 $root = $PSScriptRoot;
 
 $buildFolder = $env:userprofile + "\Documents\Arma 3 - Other Profiles\Socrates\missions";
+Remove-Item ($env:userprofile + "\Documents\Arma 3 - Other Profiles") -Recurse -Force;
 
 $devFolderItem = Get-ChildItem -Path ".\Map-Templates\Antistasi-Altis.Altis" | Select-Object -First 1;
 $devFolder = $devFolderItem.parent;
@@ -16,7 +17,7 @@ $formattedVersionId = $versionId.Split("\.") -join "-";
 
 $folderName = $devFolder.Name;
 $pair = $folderName.Split("\.");
-$missionFolderName = $pair[0] + "-" + $formattedVersionId + "-" + "Plus" + "-" + "dev" + "." + $pair[1]; 
+$missionFolderName = $pair[0] + "-" + $formattedVersionId + "-" + "Plus" + "-" + "dev" + "." + $pair[1];
 $destinationPath = $(Join-Path $buildFolder $missionFolderName);
 
 Remove-Item $destinationPath -Recurse -ErrorAction Ignore;
