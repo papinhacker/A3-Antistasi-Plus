@@ -270,21 +270,9 @@ while { alive player } do
                 }
                 else
                 {
-                    if
-                    (
-                        allUnits findIf
-                        {
-                            (side _x == Invaders
-                            || { side _x == Occupants })
-                            && { _x knowsAbout player > MAGIC_NUMBER }
-                        } != -1
-                    )
-                    then
-                    {
-                        ["Undercover", "You cannot stay Undercover while:<br/><br/>A weapon is visible<br/>Wearing a vest<br/>Wearing a helmet<br/>Wearing NVGs<br/>Wearing a mil uniform!"] call A3A_fnc_customHint;
+                    ["Undercover", "You cannot stay Undercover while:<br/><br/>A weapon is visible<br/>Wearing a vest<br/>Wearing a helmet<br/>Wearing NVGs<br/>Wearing a mil uniform!"] call A3A_fnc_customHint;
 
-                        break;
-                    };
+                    break;
                 };
             };
 
