@@ -36,8 +36,8 @@ Example:
     [] call A3A_fnc_goUndercover;
 */
 
-#define MAGIC_NUMBER 1.5
-#define FACE_DISTANCE 200
+#define MAGIC_NUMBER 1.4
+#define FACE_DISTANCE 350
 
 // ---------------------------------- Start ------------------------------------
 

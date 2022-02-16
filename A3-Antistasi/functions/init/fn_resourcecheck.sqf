@@ -50,7 +50,7 @@ while {true} do
 				};
 			};
 		};
-		
+
 		_resAddCity = _numCiv * (_supportReb / 100) / 3;
 		_hrAddCity = _numCiv * (_supportReb / 10000);
 
@@ -125,7 +125,7 @@ while {true} do
             private _paycheckText = format [
                 "<t size='0.6'>%1 got paid <t color='#00FF00'>%2%3</t> for fighting for the freedom!</t>",
                 name _x,
-                _incomePerPlayer, 
+                _incomePerPlayer,
 				currencySymbol
             ];
 
@@ -179,7 +179,7 @@ while {true} do
 	};
 
 	private _missionChance = 5 * count (allPlayers - (entities "HeadlessClient_F"));
-	if ((!bigAttackInProgress) and (random 100 < _missionChance)) then {[] spawn A3A_fnc_missionRequest};
+	//if ((!bigAttackInProgress) and (random 100 < _missionChance)) then {[] spawn A3A_fnc_missionRequest};
 	//Removed from scheduler for now, as it errors on Headless Clients.
 	//[[],"A3A_fnc_reinforcementsAI"] call A3A_fnc_scheduler;
 	[] spawn A3A_fnc_reinforcementsAI;
