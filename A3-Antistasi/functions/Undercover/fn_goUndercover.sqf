@@ -39,6 +39,25 @@ Example:
 #define MAGIC_NUMBER 1.4
 #define FACE_DISTANCE 350
 
+// -----------------------------------------------------------------------------
+
+#define STR_TITLE "Undercover"
+#define STR_SPOTTED "You have been reported or spotted by the enemy!"
+#define STR_GARRISON "The Installation Garrison has recognised you!"
+#define STR_BLOCKPOST_PASS "The blockpost guards has not recognised you!"
+#define STR_BLOCKPOST_FAIL "The blockpost guards has recognised you!!!"
+#define STR_HEALING_FACE "You cannot stay Undercover while healing a compromised resistance member<br/><br/>The enemy added you to their Wanted List!"
+#define STR_HEALING "You cannot stay Undercover while healing a compromised resistance member!"
+#define STR_WEAPON_FACE "You cannot stay Undercover while showing:<br/><br/>A weapon is visible<br/>Wearing a vest<br/>Wearing a helmet<br/>Wearing NVGs<br/>Wearing a mil uniform<br/><br/>The enemy added you to their Wanted List!"
+#define STR_WEAPON "You cannot stay Undercover while:<br/><br/>A weapon is visible<br/>Wearing a vest<br/>Wearing a helmet<br/>Wearing NVGs<br/>Wearing a mil uniform!"
+#define STR_WANTED_LIST "You are on the Wanted List!"
+#define STR_NOT_CIV_VEH "You entered a non civilian vehicle!"
+#define STR_REPORTED_VEH "You entered a reported vehicle!"
+#define STR_EXPLOSIVES "Explosives have been spotted on your vehicle!"
+#define STR_AIRSPACE "You have violated the airspace of %1!"
+#define STR_ROADS "You went too far away from any roads and have been spotted!"
+#define STR_AREA "You cannot stay Undercover inside military area"
+
 // ---------------------------------- Start ------------------------------------
 
 private _fileName = "fn_goUndercover";
@@ -132,7 +151,7 @@ while { alive player } do
 
             case !(captive player):
             {
-                ["Undercover", "You have been reported or spotted by the enemy!"] call A3A_fnc_customHint;
+                [STR_TITLE, STR_SPOTTED] call A3A_fnc_customHint;
 
                 player setVariable ["compromised", dateToNumber [date #0, date #1, date #2, date #3, (date #4) + 30]];
 
@@ -145,7 +164,7 @@ while { alive player } do
 
             case (_isOnDetectionArea):
             {
-                ["Undercover", "The Installation Garrison has recognised you!"] call A3A_fnc_customHint;
+                [STR_TITLE, STR_GARRISON] call A3A_fnc_customHint;
 
                 player setVariable ["compromised", dateToNumber [date #0, date #1, date #2, date #3, (date #4) + 30]];
 
@@ -173,17 +192,17 @@ while { alive player } do
 
                     if (random 100 >= _aggro) then
                     {
-                        ["Undercover", "The blockpost guards has not recognised you!"] call A3A_fnc_customHint;
+                        [STR_TITLE, STR_BLOCKPOST_PASS] call A3A_fnc_customHint;
 
                         _isOpenRoadBlock = true;
                         continue;
                     };
 
-                    ["Undercover", "The blockpost guards has recognised you!!!"] call A3A_fnc_customHint;
+                    [STR_TITLE, STR_BLOCKPOST_FAIL] call A3A_fnc_customHint;
                 }
                 else
                 {
-                    ["Undercover", "The Installation Garrison has recognised you!!!"] call A3A_fnc_customHint;
+                    [STR_TITLE, STR_GARRISON] call A3A_fnc_customHint;
                 };
 
                 player setVariable ["compromised", dateToNumber [date #0, date #1, date #2, date #3, (date #4) + 30]];
@@ -212,7 +231,7 @@ while { alive player } do
                 )
                 then
                 {
-                    ["Undercover", "You cannot stay Undercover while healing a compromised resistance member<br/><br/>The enemy added you to their Wanted List!"] call A3A_fnc_customHint;
+                    [STR_TITLE, STR_HEALING_FACE] call A3A_fnc_customHint;
                     player setVariable ["compromised", dateToNumber [date #0, date #1, date #2, date #3, (date #4) + 30]];
 
                     break;
@@ -230,7 +249,7 @@ while { alive player } do
                     )
                     then
                     {
-                        ["Undercover", "You cannot stay Undercover while healing a compromised resistance member!"] call A3A_fnc_customHint;
+                        [STR_TITLE, STR_HEALING] call A3A_fnc_customHint;
 
                         break;
                     };
@@ -262,7 +281,7 @@ while { alive player } do
                 )
                 then
                 {
-                    ["Undercover", "You cannot stay Undercover while showing:<br/><br/>A weapon is visible<br/>Wearing a vest<br/>Wearing a helmet<br/>Wearing NVGs<br/>Wearing a mil uniform<br/><br/>The enemy added you to their Wanted List!"] call A3A_fnc_customHint;
+                    [STR_TITLE, STR_WEAPON_FACE] call A3A_fnc_customHint;
 
                     player setVariable ["compromised", dateToNumber [date #0, date #1, date #2, date #3, (date #4) + 30]];
 
@@ -270,7 +289,7 @@ while { alive player } do
                 }
                 else
                 {
-                    ["Undercover", "You cannot stay Undercover while:<br/><br/>A weapon is visible<br/>Wearing a vest<br/>Wearing a helmet<br/>Wearing NVGs<br/>Wearing a mil uniform!"] call A3A_fnc_customHint;
+                    [STR_TITLE, STR_WEAPON] call A3A_fnc_customHint;
 
                     break;
                 };
@@ -280,7 +299,7 @@ while { alive player } do
 
             case (dateToNumber date < player getVariable ["compromised", 0]):
             {
-                ["Undercover", "You are on the Wanted List!"] call A3A_fnc_customHint;
+                [STR_TITLE, STR_WANTED_LIST] call A3A_fnc_customHint;
 
                 player setVariable ["compromised", dateToNumber [date #0, date #1, date #2, date #3, (date #4) + 30]];
 
@@ -296,7 +315,7 @@ while { alive player } do
 
             case !(captive player):
             {
-                ["Undercover", "You have been reported or spotted by the enemy!"] call A3A_fnc_customHint;
+                [STR_TITLE, STR_SPOTTED] call A3A_fnc_customHint;
 
                 reportedVehs pushBackUnique _veh;
                 publicVariable "reportedVehs";
@@ -310,7 +329,7 @@ while { alive player } do
 
             case !(_vehType in undercoverVehicles):
             {
-                ["Undercover", "You entered a non civilian vehicle!"] call A3A_fnc_customHint;
+                [STR_TITLE, STR_NOT_CIV_VEH] call A3A_fnc_customHint;
 
                 break;
             };
@@ -319,7 +338,7 @@ while { alive player } do
 
             case (_veh in reportedVehs):
             {
-                ["Undercover", "You entered a reported vehicle!"] call A3A_fnc_customHint;
+                [STR_TITLE, STR_REPORTED_VEH] call A3A_fnc_customHint;
 
                 break;
             };
@@ -335,7 +354,7 @@ while { alive player } do
                 || { ((position player nearObjects ["SatchelCharge_Remote_Ammo", 5]) #0) mineDetectedBy Invaders }}}}
             ):
             {
-                ["Undercover", "Explosives have been spotted on your vehicle!"] call A3A_fnc_customHint;
+                [STR_TITLE, STR_EXPLOSIVES] call A3A_fnc_customHint;
 
                 reportedVehs pushBackUnique (objectParent player);
                 publicVariable "reportedVehs";
@@ -350,8 +369,8 @@ while { alive player } do
             case (_detectedBy != ""):
             {
                 [
-                    "Undercover",
-                    format ["You have violated the airspace of %1!", [_detectedBy] call A3A_fnc_localizar]
+                    STR_TITLE,
+                    format [STR_AIRSPACE, [_detectedBy] call A3A_fnc_localizar]
                 ] call A3A_fnc_customHint;
 
                 reportedVehs pushBackUnique _veh;
@@ -389,7 +408,7 @@ while { alive player } do
                 )
                 then
                 {
-                    ["Undercover", "You went too far away from any roads and have been spotted!"] call A3A_fnc_customHint;
+                    [STR_TITLE, STR_ROADS] call A3A_fnc_customHint;
 
                     reportedVehs pushBackUnique _veh;
                     publicVariable "reportedVehs";
@@ -409,7 +428,7 @@ while { alive player } do
                     )
                     then
                     {
-                        ["Undercover", "You went too far away from any roads and have been spotted!"] call A3A_fnc_customHint;
+                        [STR_TITLE, STR_ROADS] call A3A_fnc_customHint;
 
                         break;
                     }
@@ -449,17 +468,17 @@ while { alive player } do
 
                     if (random 100 >= _aggro) then
                     {
-                        ["Undercover", "The blockpost guards has not recognised you!"] call A3A_fnc_customHint;
+                        [STR_TITLE, STR_BLOCKPOST_PASS] call A3A_fnc_customHint;
 
                         _isOpenRoadBlock = true;
                         continue;
                     };
 
-                    ["Undercover", "The blockpost guards has recognised you!"] call A3A_fnc_customHint;
+                    [STR_TITLE, STR_BLOCKPOST_FAIL] call A3A_fnc_customHint;
                 }
                 else
                 {
-                    ["Undercover", "The secure system has recognised you!"] call A3A_fnc_customHint;
+                    [STR_TITLE, STR_AREA] call A3A_fnc_customHint;
                 };
 
                 reportedVehs pushBackUnique _veh;
