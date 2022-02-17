@@ -6,4 +6,6 @@
  */
 if (isNil "logLevel") then {LogLevel = 2};
 
+setViewDistance 2500;
+
 [] call A3A_fnc_initServer;
