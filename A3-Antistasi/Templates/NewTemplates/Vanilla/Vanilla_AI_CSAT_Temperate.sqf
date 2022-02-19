@@ -1,3 +1,4 @@
+
 //////////////////////////
 //   Side Information   //
 //////////////////////////
@@ -134,7 +135,7 @@
 
 ["staticMGs", ["O_G_HMG_02_high_F"]] call _fnc_saveToTemplate;
 ["staticAT", ["O_static_AT_F"]] call _fnc_saveToTemplate;
-["staticAA", ["O_static_AA_F"]] call _fnc_saveToTemplate;
+["staticAA", ["B_AAA_System_01_F"]] call _fnc_saveToTemplate;
 ["staticMortars", ["O_Mortar_01_F"]] call _fnc_saveToTemplate;
 ["staticHowitzers", ["not_supported"]] call _fnc_saveToTemplate;
 

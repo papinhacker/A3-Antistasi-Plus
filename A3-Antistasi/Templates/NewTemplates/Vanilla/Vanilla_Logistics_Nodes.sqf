@@ -16,6 +16,17 @@ A3A_logistics_vehicleHardpoints = [
         [1,             [-0.05,-2.3,-0.683],     [1,2]]
     ]],
 
+    ["Unimog1550_SemiCovered2" call A3A_fnc_classNameToModel, [
+        // always 1,    location                locked seats
+        [1,             [0,-0.3,-0.5],     [3,4]],
+        [1,             [0,-1.3,-0.5],     [1,2]]
+    ]],
+
+    ["HAFM_GD240_Patrol2" call A3A_fnc_classNameToModel, [
+        // always 1,    location                locked seats
+        [1,             [0,-1.85,-0.5],          [0]]
+    ]],
+
         //Small Truck
     ["C_Van_01_transport_F" call A3A_fnc_classNameToModel, [
         [1,             [0,-0.7475,-0.615],      [2,3,4,5]],

@@ -7205,31 +7205,31 @@ class cfgHALsStore
 
 			ITEM(rhs_weap_aks74u, 200, RIFLE_STOCK);
 
-			ITEM(rhs_weap_m70ab2, 700, RIFLE_STOCK);
-			ITEM(rhs_weap_m70b1, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_m70ab2, 400, RIFLE_STOCK);
+			ITEM(rhs_weap_m70b1, 400, RIFLE_STOCK);
 			ITEM(rhs_weap_m92, 200, RIFLE_STOCK);
 
-			ITEM(rhs_weap_m70b1n, 800, RIFLE_STOCK);
-			ITEM(rhs_weap_m70b3n, 800, RIFLE_STOCK);
-			ITEM(rhs_weap_m70b3n_pbg40, 1050, RIFLE_STOCK);
+			ITEM(rhs_weap_m70b1n, 400, RIFLE_STOCK);
+			ITEM(rhs_weap_m70b3n, 400, RIFLE_STOCK);
+			ITEM(rhs_weap_m70b3n_pbg40, 650, RIFLE_STOCK);
 
-			ITEM(rhs_weap_MP44, 500, RIFLE_STOCK);
+			ITEM(rhs_weap_MP44, 200, RIFLE_STOCK);
 
-			ITEM(rhs_weap_pm63, 750, RIFLE_STOCK);
+			ITEM(rhs_weap_pm63, 450, RIFLE_STOCK);
 
-			ITEM(rhs_weap_savz58p, 950, RIFLE_STOCK);
-			ITEM(rhs_weap_savz58p_black, 950, RIFLE_STOCK);
-			ITEM(rhs_weap_savz58v, 950, RIFLE_STOCK);
-			ITEM(rhs_weap_savz58v_black, 950, RIFLE_STOCK);
+			ITEM(rhs_weap_savz58p, 550, RIFLE_STOCK);
+			ITEM(rhs_weap_savz58p_black, 550, RIFLE_STOCK);
+			ITEM(rhs_weap_savz58v, 550, RIFLE_STOCK);
+			ITEM(rhs_weap_savz58v_black, 550, RIFLE_STOCK);
 
-			ITEM(rhs_weap_akm, 800, RIFLE_STOCK);
-			ITEM(rhs_weap_akms, 800, RIFLE_STOCK);
-			ITEM(rhs_weap_akm_gp25, 1050, RIFLE_STOCK);
-			ITEM(rhs_weap_akms_gp25, 1050, RIFLE_STOCK);
-			ITEM(rhs_weap_akmn, 900, RIFLE_STOCK);
-			ITEM(rhs_weap_akmn_gp25, 1150, RIFLE_STOCK);
+			ITEM(rhs_weap_akm, 600, RIFLE_STOCK);
+			ITEM(rhs_weap_akms, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_akm_gp25, 850, RIFLE_STOCK);
+			ITEM(rhs_weap_akms_gp25, 850, RIFLE_STOCK);
+			ITEM(rhs_weap_akmn, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_akmn_gp25, 850, RIFLE_STOCK);
 			ITEM(rhs_weap_akmn_npz, 950, RIFLE_STOCK);
-			ITEM(rhs_weap_akmn_gp25_npz, 1200, RIFLE_STOCK);
+			ITEM(rhs_weap_akmn_gp25_npz, 1000, RIFLE_STOCK);
 			ITEM(rhs_weap_akm_zenitco01_b33, 1050, RIFLE_STOCK);
 			
 			ITEM(rhs_weap_vhsd2, 900, RIFLE_STOCK);
@@ -7258,45 +7258,62 @@ class cfgHALsStore
 			ITEM(rhs_weap_ak74_2, 425, RIFLE_STOCK);
 			ITEM(rhs_weap_ak74_3, 450, RIFLE_STOCK);
 			ITEM(rhs_weap_ak74_gp25, 445, RIFLE_STOCK);
-			ITEM(rhs_weap_ak74mr, 670, RIFLE_STOCK);
-			ITEM(rhs_weap_ak74mr_gp25, 710, RIFLE_STOCK);
-			ITEM(rhs_weap_ak74m_zenitco01, 675, RIFLE_STOCK);
-            ITEM(rhs_weap_ak74m_zenitco01_b33, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_ak74mr, 650, RIFLE_STOCK);
+			ITEM(rhs_weap_ak74mr_gp25, 750, RIFLE_STOCK);
+			ITEM(rhs_weap_ak74m_zenitco01, 450, RIFLE_STOCK);
+            ITEM(rhs_weap_ak74m_zenitco01_b33, 500, RIFLE_STOCK);
 			ITEM(rhs_weap_ak74m, 425, RIFLE_STOCK);
 			ITEM(rhs_weap_ak74m_gp25, 450, RIFLE_STOCK);
-			ITEM(rhs_weap_ak74n_2, 475, RIFLE_STOCK);
-			ITEM(rhs_weap_ak74n_2_gp25, 490, RIFLE_STOCK);
+			ITEM(rhs_weap_ak74n_2, 425, RIFLE_STOCK);
+			ITEM(rhs_weap_ak74n_2_gp25, 450, RIFLE_STOCK);
 
 			ITEM(rhs_weap_ak105, 700, RIFLE_STOCK);
 			ITEM(rhs_weap_ak105_zenitco01, 750, RIFLE_STOCK);
 			ITEM(rhs_weap_ak105_zenitco01_b33, 775, RIFLE_STOCK);
 
-			ITEM(rhs_weap_m21a, 600, RIFLE_STOCK);
-			ITEM(rhs_weap_m21a_pr, 750, RIFLE_STOCK);
-			ITEM(rhs_weap_m21s, 550, RIFLE_STOCK);
+			ITEM(rhs_weap_m21a, 400, RIFLE_STOCK);
+			ITEM(rhs_weap_m21a_pr, 550, RIFLE_STOCK);
+			ITEM(rhs_weap_m21s, 450, RIFLE_STOCK);
 			ITEM(rhs_weap_m21s_pr, 700, RIFLE_STOCK);
-			ITEM(rhs_weap_m21a_pbg40, 800, RIFLE_STOCK);
-			ITEM(rhs_weap_m21a_pr_pbg40, 850, RIFLE_STOCK);
+			ITEM(rhs_weap_m21a_pbg40, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_m21a_pr_pbg40, 750, RIFLE_STOCK);
 	
-			ITEM(rhs_weap_g36c, 800, RIFLE_STOCK);
-			ITEM(rhs_weap_g36kv, 900, RIFLE_STOCK);
-			ITEM(rhs_weap_g36kv_ag36, 1050, RIFLE_STOCK);
+			ITEM(rhs_weap_g36c, 600, RIFLE_STOCK);
+			ITEM(rhs_weap_g36kv, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_g36kv_ag36, 850, RIFLE_STOCK);
 
-			ITEM(rhs_weap_mk18, 900, RIFLE_STOCK);
-			ITEM(rhs_weap_mk18_bk, 900, RIFLE_STOCK);
-			ITEM(rhs_weap_mk18_KAC_bk, 900, RIFLE_STOCK);
-			ITEM(rhs_weap_mk18_d, 900, RIFLE_STOCK);
-			ITEM(rhs_weap_mk18_KAC_d, 900, RIFLE_STOCK);
-			ITEM(rhs_weap_mk18_m320, 950, RIFLE_STOCK);
-			ITEM(rhs_weap_mk18_KAC, 900, RIFLE_STOCK);
-			ITEM(rhs_weap_mk18_wd, 900, RIFLE_STOCK);
-			ITEM(rhs_weap_mk18_KAC_wd, 900, RIFLE_STOCK);
+			ITEM(rhs_weap_mk18, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_mk18_bk, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_mk18_KAC_bk, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_mk18_d, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_mk18_KAC_d, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_mk18_m320, 750, RIFLE_STOCK);
+			ITEM(rhs_weap_mk18_KAC, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_mk18_wd, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_mk18_KAC_wd, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1_blockII_bk, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1_blockII, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1_blockII_M203_bk, 750, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1_blockII_KAC_bk, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1_blockII_KAC, 700, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1_blockII_M203, 750, RIFLE_STOCK);
 
-			ITEM(rhs_weap_hk416d10, 850, RIFLE_STOCK);
-			ITEM(rhs_weap_hk416d10_LMT, 850, RIFLE_STOCK);
-			ITEM(rhs_weap_hk416d10_LMT_d, 850, RIFLE_STOCK);
-			ITEM(rhs_weap_hk416d10_LMT_wd, 850, RIFLE_STOCK);
-			ITEM(rhs_weap_hk416d10_m320, 850, RIFLE_STOCK);
+            ITEM(rhs_weap_m4_carryhandle, 550, RIFLE_STOCK);
+			ITEM(rhs_weap_m4_carryhandle_m203, 560, RIFLE_STOCK);
+			ITEM(rhs_weap_m4_carryhandle_m203S, 535, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1_carryhandle, 600, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1_carryhandle_m203S, 650, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1_carryhandle_m203, 650, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1, 600, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1_m203s, 650, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1_m203, 650, RIFLE_STOCK);
+			ITEM(rhs_weap_m4a1_m320, 650, RIFLE_STOCK);
+
+			ITEM(rhs_weap_hk416d10, 750, RIFLE_STOCK);
+			ITEM(rhs_weap_hk416d10_LMT, 750, RIFLE_STOCK);
+			ITEM(rhs_weap_hk416d10_LMT_d, 750, RIFLE_STOCK);
+			ITEM(rhs_weap_hk416d10_LMT_wd, 750, RIFLE_STOCK);
+			ITEM(rhs_weap_hk416d10_m320, 800, RIFLE_STOCK);
 
 			ITEM(rhs_weap_hk416d145, 900, RIFLE_STOCK);
 			ITEM(rhs_weap_hk416d145_d, 900, RIFLE_STOCK);
@@ -7386,19 +7403,39 @@ class cfgHALsStore
 			displayName = "Machine Guns";
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\primaryWeapon_ca.paa";
 
-			ITEM(rhs_weap_m27iar, 1000, RIFLE_STOCK);
+			ITEM(rhs_weap_m27iar, 600, RIFLE_STOCK);
 
-			ITEM(rhs_weap_m249, 1100, RIFLE_STOCK);
+			ITEM(rhs_weap_m249, 1000, RIFLE_STOCK);
 
-			ITEM(rhs_weap_m249_pip, 1350, RIFLE_STOCK);
+			ITEM(rhs_weap_m249_pip, 1150, RIFLE_STOCK);
 
-			ITEM(rhs_weap_m84, 1500, RIFLE_STOCK);
+			ITEM(rhs_weap_m84, 600, RIFLE_STOCK);
 
-			ITEM(rhs_weap_mg42, 1700, RIFLE_STOCK);
+			ITEM(rhs_weap_mg42, 900, RIFLE_STOCK);
 
-			ITEM(rhs_weap_pkp, 1500, RIFLE_STOCK);
+			ITEM(rhs_weap_pkm, 600, RIFLE_STOCK);
+
+			ITEM(rhs_weap_pkp, 800, RIFLE_STOCK);
 			
-			ITEM(rhs_weap_m240G, 1750, RIFLE_STOCK);
+			ITEM(rhs_weap_m240G, 1050, RIFLE_STOCK);
+
+			ITEM(rhs_weap_m240B, 1100, RIFLE_STOCK);
+
+			ITEM(rhs_weap_m249_light_S, 1175, RIFLE_STOCK);
+
+			ITEM(rhs_weap_m249_pip_S_para, 1150, RIFLE_STOCK);
+
+			ITEM(rhs_weap_m249_pip_S, 1100, RIFLE_STOCK);
+
+			ITEM(rhs_weap_m249_pip_ris 1100, RIFLE_STOCK);
+
+			ITEM(rhs_weap_m249_light_L, 1150, RIFLE_STOCK);
+
+			ITEM(rhs_weap_m249_pip_L_para, 1100, RIFLE_STOCK);
+
+			ITEM(rhs_weap_m249_pip_L, 1100, RIFLE_STOCK);
+
+			ITEM(arifle_RPK12_F, 1200, RIFLE_STOCK);
 
 			ITEM(rhs_weap_rpk74m, 800, RIFLE_STOCK);
 			
@@ -7430,7 +7467,7 @@ class cfgHALsStore
 
 			ITEM(rhs_weap_m79, 350, RIFLE_STOCK);
 
-			ITEM(rhs_weap_m32, 850, RIFLE_STOCK);
+			ITEM(rhs_weap_m32, 550, RIFLE_STOCK);
 
 			ITEM(rhs_weap_M590_8RD, 200, RIFLE_STOCK);
 		};
@@ -7462,6 +7499,8 @@ class cfgHALsStore
 			ITEM(rhs_1PN138, 500, NN_STOCK);
 			ITEM(rhsusf_ANPVS_14, 500, NN_STOCK);
 			ITEM(rhsusf_ANPVS_15, 1000, NN_STOCK);
+			ITEM(NVGogglesB_grn_F, 12500, NN_STOCK);
+			ITEM(ACE_NVG_Wide, 515, NN_STOCK);
 		};
 
 		class underbarrelRhs 
@@ -7533,18 +7572,18 @@ class cfgHALsStore
 			displayName = "Muzzle Accessories";
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemMuzzle_ca.paa";
 
-			ITEM(rhs_acc_6p9_suppressor, 200, MZ_STOCK);
+			ITEM(rhs_acc_6p9_suppressor, 100, MZ_STOCK);
 
-			ITEM(rhsusf_acc_rotex_mp7_aor1, 200, MZ_STOCK);
-			ITEM(rhsusf_acc_rotex_mp7, 200, MZ_STOCK);
-			ITEM(rhsusf_acc_rotex_mp7_desert, 200, MZ_STOCK);
-			ITEM(rhsusf_acc_rotex_mp7_winter, 200, MZ_STOCK);
+			ITEM(rhsusf_acc_rotex_mp7_aor1, 100, MZ_STOCK);
+			ITEM(rhsusf_acc_rotex_mp7, 100, MZ_STOCK);
+			ITEM(rhsusf_acc_rotex_mp7_desert, 100, MZ_STOCK);
+			ITEM(rhsusf_acc_rotex_mp7_winter, 100, MZ_STOCK);
 
-			ITEM(rhsusf_acc_omega9k, 200, MZ_STOCK);
-			ITEM(rhsusf_acc_nt4_black, 200, MZ_STOCK);
-			ITEM(rhsusf_acc_nt4_tan, 200, MZ_STOCK);
-			ITEM(rhsusf_acc_rotex5_grey, 200, MZ_STOCK);
-			ITEM(rhsusf_acc_rotex5_tan, 200, MZ_STOCK);
+			ITEM(rhsusf_acc_omega9k, 100, MZ_STOCK);
+			ITEM(rhsusf_acc_nt4_black, 100, MZ_STOCK);
+			ITEM(rhsusf_acc_nt4_tan, 100, MZ_STOCK);
+			ITEM(rhsusf_acc_rotex5_grey, 100, MZ_STOCK);
+			ITEM(rhsusf_acc_rotex5_tan, 100, MZ_STOCK);
 
 			ITEM(rhsusf_acc_aac_762sd_silencer, 300, MZ_STOCK);
 			ITEM(rhsusf_acc_aac_762sdn6_silencer, 300, MZ_STOCK);
@@ -7556,7 +7595,7 @@ class cfgHALsStore
 
 			ITEM(rhsgref_acc_falMuzzle_l1a1, 150, MZ_STOCK);
 
-			ITEM(rhsusf_acc_m14_flashsuppresor, 200, MZ_STOCK);
+			ITEM(rhsusf_acc_m14_flashsuppresor, 100, MZ_STOCK);
 
 			ITEM(rhsusf_acc_SF3P556, 50, MZ_STOCK);
 			ITEM(rhsusf_acc_SFMB556, 65, MZ_STOCK);
@@ -7570,9 +7609,9 @@ class cfgHALsStore
 			ITEM(rhs_acc_dtk1, 25, MZ_STOCK);
 			ITEM(rhs_acc_dtk2, 35, MZ_STOCK);
 			ITEM(rhs_acc_dtk3, 50, MZ_STOCK);
-			ITEM(rhs_acc_dtk4long, 200, MZ_STOCK);
-			ITEM(rhs_acc_dtk4screws, 200, MZ_STOCK);
-			ITEM(rhs_acc_pbs1, 200, MZ_STOCK);
+			ITEM(rhs_acc_dtk4long, 100, MZ_STOCK);
+			ITEM(rhs_acc_dtk4screws, 100, MZ_STOCK);
+			ITEM(rhs_acc_pbs1, 100, MZ_STOCK);
             ITEM(rhs_acc_tgpa, 100, MZ_STOCK);
 			ITEM(rhs_acc_dtk4short, 75 MZ_STOCK);
 			
@@ -7594,6 +7633,11 @@ class cfgHALsStore
 		{
 			displayName = "Optics Accessories";
 			picture = "";
+
+            class optic_MRCO {
+				price = 900
+				stock = 100
+			};
 
 			class rhsgref_acc_l1a1_l2a2 {
 				price = 450;

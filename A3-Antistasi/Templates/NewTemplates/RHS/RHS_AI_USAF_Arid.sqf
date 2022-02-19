@@ -133,7 +133,7 @@
 
 ["staticMGs", ["RHS_M2StaticMG_D"]] call _fnc_saveToTemplate;
 ["staticAT", ["RHS_TOW_TriPod_D"]] call _fnc_saveToTemplate;
-["staticAA", ["RHS_Stinger_AA_pod_D"]] call _fnc_saveToTemplate;
+["staticAA", ["B_AAA_System_01_F"]] call _fnc_saveToTemplate;
 ["staticMortars", ["RHS_M252_D"]] call _fnc_saveToTemplate;
 ["staticHowitzers", ["RHS_M119_WD"]] call _fnc_saveToTemplate;
 
