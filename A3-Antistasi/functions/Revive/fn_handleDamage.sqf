@@ -4,17 +4,21 @@ params ["_unit","_part","_damage","_injurer","_projectile","_hitIndex","_instiga
 
 // Functionality unrelated to Antistasi revive
 // Helmet popping: use _hitpoint rather than _part to work around ACE calling its fake hitpoint "head"
-if
-(
-	!A3A_hasPIRMedical
-	&& { _damage >= 1
-	&& { _hitPoint == "hithead"
-	&& { random 100 < helmetLossChance }}}
-)
+if (isNil "A3A_hasPIRMedical" || { !A3A_hasPIRMedical })
 then
 {
-	removeHeadgear _unit;
+	if
+	(
+		_damage >= 1
+		&& { _hitPoint == "hithead"
+		&& { random 100 < helmetLossChance }}
+	)
+	then
+	{
+		removeHeadgear _unit;
+	};
 };
+
 
 if (_part == "" && _damage > 0.1) then
 {
@@ -59,7 +63,7 @@ if (_part == "" && _damage > 0.1) then
 
 // Let ACE medical handle the rest (inc return value) if it's running
 if (A3A_hasACEMedical) exitWith {};
-if (A3A_hasPIRMedical) exitWith {};
+if (!isNil "A3A_hasPIRMedical" && { A3A_hasPIRMedical }) exitWith {};
 
 // -----------------------------------------------------------------------------
 

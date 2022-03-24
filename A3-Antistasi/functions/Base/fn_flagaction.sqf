@@ -39,9 +39,9 @@ switch _typeX do
         actionX = _flag addAction ["<t>Transfer Ammobox to Truck<t> <img image='\A3\ui_f\data\igui\cfg\actions\unloadVehicle_ca.paa' size='1.8' shadow=2 />", A3A_fnc_transfer,nil,6,true,true,"","(isPlayer _this) and (_this == _this getVariable ['owner',objNull])"]
     };
     case "heal":
-    {   
+    {
         // Используется для ванильного ревайва
-        if (player != _flag && { !A3A_hasPIRMedical }) then
+        if (player != _flag && { isNil "A3A_hasPIRMedical" || { !A3A_hasPIRMedical }}) then
         {
             _actionX = _flag addAction [format ["<t>Revive %1 </t> <img size='1.8' <img image='\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa' />",name _flag], A3A_fnc_actionRevive,nil,6,true,true,"","!(_this getVariable [""helping"",false]) and (isNull attachedTo _target)",4];
             _flag setUserActionText [_actionX,format ["Revive %1",name _flag],"<t size='2'><img image='\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa'/></t>"];
@@ -49,7 +49,7 @@ switch _typeX do
     };
     case "heal1":
     {
-        if (player != _flag && { !A3A_hasPIRMedical }) then
+        if (player != _flag && { isNil "A3A_hasPIRMedical" || { !A3A_hasPIRMedical }}) then
         {
             _actionX = _flag addAction [format ["<t>Revive %1</t> <img size='1.8' <img image='\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa' />",name _flag], A3A_fnc_actionRevive,nil,6,true,false,"","!(_this getVariable [""helping"",false]) and (isNull attachedTo _target)",4];
             _flag setUserActionText [_actionX,format ["Revive %1",name _flag],"<t size='2'><img image='\a3\ui_f\data\IGUI\Cfg\holdactions\holdAction_revive_ca.paa'/></t>"];

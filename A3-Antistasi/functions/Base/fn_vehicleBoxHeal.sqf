@@ -61,7 +61,7 @@ private _posHQ = getMarkerPos respawnTeamPlayer;
             {
                 [_x, _x] call ace_medical_treatment_fnc_fullHeal;
             };
-            case (A3A_hasPIRMedical):
+            case (!isNil "A3A_hasPIRMedical" && { A3A_hasPIRMedical }):
             {
                 _x setVariable ["compromised", 0, true];
             };
