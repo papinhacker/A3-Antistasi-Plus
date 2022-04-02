@@ -7107,29 +7107,29 @@ class cfgHALsStore
 			displayName = "Launchers";
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\secondaryWeapon_ca.paa";
 
-			ITEM(rhs_weap_rpg26, 200, 50);
-			ITEM(rhs_weap_rshg2, 200, 50);
-			ITEM(rhs_weap_rpg75, 175, 50);
+			ITEM(rhs_weap_rpg26, 200, 5000);
+			ITEM(rhs_weap_rshg2, 200, 5000);
+			ITEM(rhs_weap_rpg75, 175, 5000);
 
-			ITEM(rhs_weap_m80, 250, 50);
+			ITEM(rhs_weap_m80, 250, 5000);
 
-			ITEM(rhs_weap_m72a7, 300, 50);
+			ITEM(rhs_weap_m72a7, 300, 5000);
 
-			ITEM(rhs_weap_M136, 400, 50);
-			ITEM(rhs_weap_M136_hedp, 500, 50);
-			ITEM(rhs_weap_M136_hp, 500, 50);
+			ITEM(rhs_weap_M136, 400, 5000);
+			ITEM(rhs_weap_M136_hedp, 500, 5000);
+			ITEM(rhs_weap_M136_hp, 500, 5000);
 
-			ITEM(rhs_weap_rpg7, 750, 15);
+			ITEM(rhs_weap_rpg7, 750, 1500);
 
-			ITEM(rhs_weap_maaws, 1300, 15);
+			ITEM(rhs_weap_maaws, 1300, 1500);
 
-			ITEM(rhs_weap_igla, 1300, 50);
-			ITEM(rhs_weap_fim92, 1600, 50);
+			ITEM(rhs_weap_igla, 1300, 5000);
+			ITEM(rhs_weap_fim92, 1600, 5000);
 
-			ITEM(rhs_weap_smaw, 1500, 15);
-			ITEM(rhs_weap_smaw_green, 1500, 15);
+			ITEM(rhs_weap_smaw, 1500, 1500);
+			ITEM(rhs_weap_smaw_green, 1500, 1500);
 
-			ITEM(rhs_weap_fgm148, 6000, 10);
+			ITEM(rhs_weap_fgm148, 6000, 1000);
 		};
 
 		class launcherMagazinesRhs 
@@ -7139,62 +7139,62 @@ class cfgHALsStore
 		
 			class rhs_rpg7_PG7V_mag {
 				price = 75;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_rpg7_PG7VM_mag {
 				price = 100;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_rpg7_PG7VS_mag {
 				price = 150;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_rpg7_PG7VL_mag {
 				price = 250;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_rpg7_PG7VR_mag {
 				price = 300;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_rpg7_TBG7V_mag {
 				price = 300;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_rpg7_OG7V_mag {
 				price = 150;
-				stock = 50;
+				stock = 5000;
 			};
 
 			class rhs_mag_maaws_HEAT {
 				price = 250;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_mag_maaws_HEDP {
 				price = 350;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_mag_maaws_HE {
 				price = 200;
-				stock = 50;
+				stock = 5000;
 			};
 
 			class rhs_mag_smaw_SR {
 				price = 100;
-				stock = 500;
+				stock = 5000;
 			};
 			class rhs_mag_smaw_HEAA {
 				price = 250;
-				stock = 50;
+				stock = 5000;
 			};
 			class rhs_mag_smaw_HEDP {
 				price = 350;
-				stock = 50;
+				stock = 5000;
 			};
 
 			class rhs_fgm148_magazine_AT {
 				price = 1000;
-				stock = 50;
+				stock = 5000;
 			};
 		};
 
@@ -7379,10 +7379,10 @@ class cfgHALsStore
 			ITEM(rhs_weap_XM2010_d, 1500, RIFLE_STOCK);
 			ITEM(rhs_weap_XM2010_sa, 1500, RIFLE_STOCK);
 
-			ITEM(rhs_weap_M107, 3500, 5);
-			ITEM(rhs_weap_M107_d, 3500, 5);
-			ITEM(rhs_weap_M107_w, 3500, 5);
-			ITEM(rhs_weap_m82a1, 3500, 5);
+			ITEM(rhs_weap_M107, 3500, 50);
+			ITEM(rhs_weap_M107_d, 3500, 50);
+			ITEM(rhs_weap_M107_w, 3500, 50);
+			ITEM(rhs_weap_m82a1, 3500, 50);
 
 			ITEM(rhs_weap_mk17_CQC, 1100, RIFLE_STOCK);
 			ITEM(rhs_weap_mk17_STD, 1100, RIFLE_STOCK);
@@ -7508,30 +7508,30 @@ class cfgHALsStore
 			displayName = "Underbarrel Accessories";
 			picture = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemBipod_ca.paa";
 
-			ITEM(rhs_acc_harris_swivel, 100, 50);
-			ITEM(rhsusf_acc_harris_bipod, 100, 50);
+			ITEM(rhs_acc_harris_swivel, 100, 500);
+			ITEM(rhsusf_acc_harris_bipod, 100, 500);
 
-			ITEM(rhsusf_acc_saw_bipod, 100, 50);
+			ITEM(rhsusf_acc_saw_bipod, 100, 500);
 
-			ITEM(rhsusf_acc_grip2, 200, 50);
-			ITEM(rhsusf_acc_grip2_tan, 200, 50);
-			ITEM(rhsusf_acc_grip2_wd, 200, 50);
-			ITEM(rhs_acc_grip_ffg2, 200, 50);
-			ITEM(rhsusf_acc_grip1, 200, 50);
-			ITEM(rhsusf_acc_kac_grip, 200, 50);
-			ITEM(rhs_acc_grip_rk2, 200, 50);
-			ITEM(rhs_acc_grip_rk6, 200, 50);
-			ITEM(rhsusf_acc_rvg_blk, 200, 50);
-			ITEM(rhsusf_acc_rvg_de, 200, 50);
-			ITEM(rhsusf_acc_tacsac_blk, 200, 50);
-			ITEM(rhsusf_acc_tacsac_blue, 200, 50);
-			ITEM(rhsusf_acc_tacsac_tan, 200, 50);
-			ITEM(rhsusf_acc_tdstubby_blk, 200, 50);
-			ITEM(rhsusf_acc_tdstubby_tan, 200, 50);
-			ITEM(rhsusf_acc_grip3, 200, 50);
-			ITEM(rhsusf_acc_grip3_tan, 200, 50);
+			ITEM(rhsusf_acc_grip2, 200, 500);
+			ITEM(rhsusf_acc_grip2_tan, 200, 500);
+			ITEM(rhsusf_acc_grip2_wd, 200, 500);
+			ITEM(rhs_acc_grip_ffg2, 200, 500);
+			ITEM(rhsusf_acc_grip1, 200, 500);
+			ITEM(rhsusf_acc_kac_grip, 200, 500);
+			ITEM(rhs_acc_grip_rk2, 200, 500);
+			ITEM(rhs_acc_grip_rk6, 200, 500);
+			ITEM(rhsusf_acc_rvg_blk, 200, 500);
+			ITEM(rhsusf_acc_rvg_de, 200, 500);
+			ITEM(rhsusf_acc_tacsac_blk, 200, 500);
+			ITEM(rhsusf_acc_tacsac_blue, 200, 500);
+			ITEM(rhsusf_acc_tacsac_tan, 200, 500);
+			ITEM(rhsusf_acc_tdstubby_blk, 200, 500);
+			ITEM(rhsusf_acc_tdstubby_tan, 200, 500);
+			ITEM(rhsusf_acc_grip3, 200, 500);
+			ITEM(rhsusf_acc_grip3_tan, 200, 500);
 			
-			ITEM(rhsusf_acc_m14_bipod, 200, 50);
+			ITEM(rhsusf_acc_m14_bipod, 200, 500);
 		};
 
 		class pointersRhs 
@@ -7636,248 +7636,248 @@ class cfgHALsStore
 
             class optic_MRCO {
 				price = 900
-				stock = 100
+				stock = 1000
 			};
 
 			class rhsgref_acc_l1a1_l2a2 {
 				price = 450;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhsgref_acc_l1a1_anpvs2 {
 				price = 1100;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhs_acc_1pn93_1 {
 				price = 1000;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_1pn93_2 {
 				price = 1000;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_pgo7v {
 				price = 500;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_pgo7v2 {
 				price = 525;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_pgo7v3 {
 				price = 550;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhs_optic_maaws {
 				price = 500;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhs_acc_1p29 {
 				price = 400;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_1p63 {
 				price = 250;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_1p78 {
 				price = 500;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_1pn34 {
 				price = 850;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_ekp1 {
 				price = 200;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_ekp8_02 {
 				price = 200;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_nita {
 				price = 350;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_okp7_dovetail {
 				price = 250;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_pkas {
 				price = 300;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_pso1m2 {
 				price = 750;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_pso1m21 {
 				price = 750;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhs_acc_rakursPM {
 				price = 200;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_1p87 {
 				price = 200;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_ekp8_18 {
 				price = 200;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_okp7_picatinny {
 				price = 200;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhs_acc_dh520x56 {
 				price = 1500;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhsusf_acc_EOTECH {
 				price = 250;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_eotech_552 {
 				price = 250;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_eotech_552_d {
 				price = 250;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_eotech_552_wd {
 				price = 250;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_compm4 {
 				price = 300;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhsusf_acc_M8541 {
 				price = 1000;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_M8541_low {
 				price = 1000;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_M8541_low_d {
 				price = 1000;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_M8541_low_wd {
 				price = 1000;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_premier_low {
 				price = 1000;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_premier_anpvs27 {
 				price = 1600;
-				stock = 100;
+				stock = 1000;
 			};
 		    class FHQ_optic_AC11704 {
 			    price = 350;				
-				stock = 200;				
+				stock = 2000;				
 			};	
             class FHQ_optic_AC11704_tan {
 				price = 350
-				stock = 200
+				stock = 2000
 			};		    
 			class rhsusf_acc_premier {
 				price = 1000;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_LEUPOLDMK4 {
 				price = 900;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_LEUPOLDMK4_2 {
 				price = 1250;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_LEUPOLDMK4_d {
 				price = 1500;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_LEUPOLDMK4_wd {
 				price = 1500;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_LEUPOLDMK4_2_d {
 				price = 1500;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_LEUPOLDMK4_2_mrds {
 				price = 1750;
-				stock = 100;
+				stock = 1000;
 			};
 
 
 			class rhsusf_acc_mrds {
 				price = 200;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_mrds_fwd {
 				price = 200;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_mrds_c {
 				price = 200;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_mrds_fwd_c {
 				price = 200;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_RM05 {
 				price = 200;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_RM05_fwd {
 				price = 200;
-				stock = 100;
+				stock = 1000;
 			};
 
 
 			class rhsusf_acc_RX01_NoFilter {
 				price = 250;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_RX01 {
 				price = 300;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_RX01_NoFilter_tan {
 				price = 250;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_RX01_tan {
 				price = 300;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsgref_acc_RX01_NoFilter_camo {
 				price = 250;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsgref_acc_RX01_camo {
 				price = 300;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhsusf_acc_T1_high {
 				price = 250;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_T1_low {
 				price = 300;
@@ -7885,125 +7885,125 @@ class cfgHALsStore
 			};
 			class rhsusf_acc_T1_low_fwd {
 				price = 250;
-				stock = 100;
+				stock = 1000;
 			};
 
 
 			class rhsusf_acc_su230 {
 				price = 800;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_su230_c {
 				price = 800;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_su230_mrds {
 				price = 1050;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_su230_mrds_c {
 				price = 1050;
-				stock = 100;
+				stock = 1000;
 			};
 
 
 			class rhsusf_acc_su230a {
 				price = 850;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_su230a_c {
 				price = 850;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_su230a_mrds {
 				price = 1100;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_su230a_mrds_c {
 				price = 1100;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhsusf_acc_ACOG_MDO {
 				price = 1500;
-				stock = 100;
+				stock = 1000;
 			};
 
 
 			class rhsusf_acc_premier_mrds {
 				price = 1250;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_M8541_mrds {
 				price = 1250;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhsusf_acc_g33_T1 {
 				price = 550;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_g33_xps3 {
 				price = 500;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_g33_xps3_tan {
 				price = 500;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhsusf_acc_anpas13gv1 {
 				price = 2500;
-				stock = 5;
+				stock = 500;
 			};
 
 			class rhsusf_acc_anpvs27 {
 				price = 600;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhsusf_acc_ACOG {
 				price = 850;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_ACOG2_USMC {
 				price = 900;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_ACOG3_USMC {
 				price = 950;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_ACOG_USMC {
 				price = 850;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhsusf_acc_ACOG_RMR {
 				price = 1100;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_ACOG_d {
 				price = 850;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_ACOG_wd {
 				price = 850;
-				stock = 100;
+				stock = 1000;
 			};
 
 			class rhsusf_acc_ELCAN {
 				price = 700;
-				stock = 100;
+				stock = 1000;
 			};
 			class rhsusf_acc_ELCAN_ard {
 				price = 750;
-				stock = 100;
+				stock = 1000;
 			};
 			
 			class rhsusf_acc_ACOG_anpvs27 {
 				price = 1450;
-				stock = 100;
+				stock = 1000;
 			};
 		};
 
