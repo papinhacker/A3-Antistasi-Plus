@@ -14,7 +14,7 @@ private _filename = "selector.sqf";
 //Map checker
 private _aridMaps = ["altis", "takistan"];
 
-tropicalMaps = ["tanoa", "cam_lao_nam", "vn_khe_sanh", "rhspkl"]; //global because used by QRF code
+tropicalMaps = ["tanoa", "cam_lao_nam", "vn_khe_sanh", "rhspkl", "UMB_Colombia"]; //global because used by QRF code
 
 private _temperateMaps = ["panthera3", "enoch", "vt7", "cup_chernarus_a3", "napf", "abramia", "taviana", "gm_weferlingen_summer", "blud_vidda"];
 //Mod selector
@@ -172,7 +172,10 @@ A3A_Occ_template = switch(true) do {
         switch(rhsOccupantFaction) do {
             case (0): { //USAF
                 switch(true) do {
-                    case (_terrainName in tropicalMaps);
+                    case (_terrainName in tropicalMaps): {
+                        ["Templates\NewTemplates\RHS\RHS_AI_COL_Temperate.sqf", west] call A3A_fnc_compatibilityLoadFaction;
+                        [2, "Using tropical Colombian Template", _filename] call A3A_fnc_log;
+                    };
                     case (_terrainName in _temperateMaps): {
                         ["Templates\NewTemplates\RHS\RHS_AI_USAF_Temperate.sqf", west] call A3A_fnc_compatibilityLoadFaction;
                         [2, "Using temperate USAF Template", _filename] call A3A_fnc_log;
