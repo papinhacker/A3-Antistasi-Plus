@@ -11,7 +11,7 @@ if !(_playerX call A3A_fnc_canFight) exitWith {
     [1, "Action somehow used by dead or unconscious player?", _filename, true] call A3A_fnc_log;
 };
 if (captive _playerX) exitWith {["Capture", "You cannot Capture the Flag while Undercover."] call A3A_fnc_customHint;};
-if ((_markerX in airportsX) and (tierWar < 3)) exitWith {["Capture", "You cannot capture Airports until you reach War Level 3."] call A3A_fnc_customHint;};
+if ((_markerX in airportsX) and (tierWar < 5)) exitWith {["Capture", "You cannot capture Airports until you reach War Level 5."] call A3A_fnc_customHint;};
 if ((_markerX in milbases) and (tierWar < 3)) exitWith {["Capture", "You cannot capture Military Bases until you reach War Level 3"] call A3A_fnc_customHint;};
 
 //Check if the flag is locked
