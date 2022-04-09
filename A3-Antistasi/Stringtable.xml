@@ -2098,18 +2098,18 @@
     </Container>
     <Container name="mission_info">
       <Key ID="STR_antistasi_mission_info_altis_mapname_short_text">
-        <Original>Antistasi Plus - Altis Requiem</Original>
-        <English>Antistasi Plus - Altis Requiem</English>
-        <Russian>Antistasi Plus - Реквием по Алтису</Russian>
-        <Chinesesimp>Antistasi Plus - 阿尔蒂斯安魂曲</Chinesesimp>
+        <Original>Antistasi Plus</Original>
+        <English>Antistasi Plus</English>
+        <Russian>Antistasi Plus</Russian>
+        <Chinesesimp>Antistasi Plus</Chinesesimp>
       </Key>
       <Key ID="STR_antistasi_mission_info_altis_mapname_text">
-        <Original>Antistasi Plus - Altis Requiem</Original>
-        <English>Antistasi Plus - Altis Requiem</English>
-        <French>Antistasi Plus - Altis Requiem</French>
-        <Korean>Antistasi Plus - Altis Requiem</Korean>
-        <Chinesesimp>Antistasi Plus - 阿尔蒂斯安魂曲</Chinesesimp>
-        <Russian>Antistasi Plus - Реквием по Алтису</Russian>
+        <Original>Antistasi Plus</Original>
+        <English>Antistasi Plus</English>
+        <French>Antistasi Plus</French>
+        <Korean>Antistasi Plus</Korean>
+        <Chinesesimp>Antistasi Plus</Chinesesimp>
+        <Russian>Antistasi Plus</Russian>
       </Key>
       <Key ID="STR_antistasi_mission_info_altis_description_text">
         <Original>Be the Resistance Leader. Fight against a superior enemy in technology, number, assets and vehicles. Use guerrilla tactics in a totally dynamic world, with around 26 sidemissions, everywhere, anytime, anything.</Original>
