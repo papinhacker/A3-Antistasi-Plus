@@ -1,5 +1,11 @@
 // HandleDamage event handler for enemy (gov/inv) AIs
 
+#define CRITICAL_DAMAGE 0.9
+// #define UNSUFFICITED_DAMAGE 0.1
+#define STOP_HELPING_DAMAGE 0.25
+#define FULL_DAMAGE 1.0
+#define GET_TO_COVER_DAMAGE 0.6
+
 params ["_unit", "_part", "_damage", "_injurer", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
 
 // Functionality unrelated to Antistasi revive
@@ -10,16 +16,11 @@ then
 	if (isNil "A3A_hasPIRMedical" || { !A3A_hasPIRMedical })
 	then
 	{
-		if
-		(
-			_damage >= 1
-			&& { _hitPoint == "hithead"
-			&& {  random 100 < helmetLossChance }}
-		)
-		then
-		{
-			removeHeadgear _unit;
-		};
+		if (_damage < CRITICAL_DAMAGE) exitWith {};
+		if (_hitPoint != "hithead") exitWith {};
+		if (random 100 >= helmetLossChance) exitWith {};
+
+		removeHeadgear _unit;
 	};
 
 
@@ -37,45 +38,44 @@ then
 		then
 		{
 			_groupX setVariable ["movedToCover", time + 120];
-			{[_x,_injurer] call A3A_fnc_unitGetToCover} forEach units _groupX;
+
+			{
+				[_x, _injurer] call A3A_fnc_unitGetToCover;
+			} forEach units _groupX;
 		};
 
-		if (_part == "" && _damage < 1) then
-		{
-			if (_damage > 0.6) then {[_unit,_injurer] spawn A3A_fnc_unitGetToCover};
-		};
+		if (_part != "") exitWith {};
+		if (_damage >= 1) exitWith {};
+		if (_damage <= GET_TO_COVER_DAMAGE) exitWith {};
+
+		[_unit, _injurer] spawn A3A_fnc_unitGetToCover;
 	};
 
 
 	// Contact report generation for PvP players
-	if (_part == "" && side group _unit == Occupants)
-	then
-	{
-		// Check if unit is part of a garrison
-		private _marker = _unit getVariable ["markerX", ""];
+	if (_part != "") exitWith {};
+	if (side group _unit != Occupants) exitWith {};
 
-		if (_marker != "" && {sidesX getVariable [_marker,sideUnknown] == Occupants})
-		then
-		{
-			// Limit last attack var changes and task updates to once per 30 seconds
-			private _lastAttackTime = garrison getVariable [_marker + "_lastAttack", -30];
+	// Check if unit is part of a garrison
+	private _marker = _unit getVariable ["markerX", ""];
 
-			if (_lastAttackTime + 30 < serverTime)
-			then
-			{
-				garrison setVariable [_marker + "_lastAttack", serverTime, true];
-				[_marker, teamPlayer, side group _unit] remoteExec ["A3A_fnc_underAttack", 2];
-			};
-		};
-	};
+	if (_marker == "") exitWith {};
+	if (sidesX getVariable [_marker, sideUnknown] != Occupants) exitWith {};
+
+	// Limit last attack var changes and task updates to once per 30 seconds
+	private _lastAttackTime = garrison getVariable [_marker + "_lastAttack", -30];
+
+	if (_lastAttackTime + 30 >= serverTime) exitWith {};
+
+	garrison setVariable [_marker + "_lastAttack", serverTime, true];
+	[_marker, teamPlayer, side group _unit] remoteExec ["A3A_fnc_underAttack", 2];
 };
 
 // Let ACE medical handle the rest (inc return value) if it's running
 if (A3A_hasACEMedical) exitWith {};
-if (!isNil "A3A_hasPIRMedical"
-	&& { A3A_hasPIRMedical }) exitWith {};
+if (!isNil "A3A_hasPIRMedical" && { A3A_hasPIRMedical }) exitWith {};
 
-// -----------------------------------------------------------------------------
+// ----------------------------- makeUnconscious -------------------------------
 
 private _makeUnconscious =
 {
@@ -85,7 +85,6 @@ private _makeUnconscious =
 	_unit setUnconscious true;
 
 	if (vehicle _unit != _unit) then { moveOut _unit; };
-
 	if (isPlayer _unit) then { _unit allowDamage false; };
 
 	//Make sure to pass group lead if unit is the leader
@@ -94,82 +93,59 @@ private _makeUnconscious =
 	{
 		private _index = (units (group _unit)) findIf {[_x] call A3A_fnc_canFight};
 
-		if (_index != -1)
-		then
-		{
-			(group _unit) selectLeader ((units (group _unit)) select _index);
-		}
+		if (_index == -1) exitWith {};
+
+		(group _unit) selectLeader ((units (group _unit)) select _index);
 	};
 
 	[_unit, _injurer] spawn A3A_fnc_unconsciousAAF;
 };
 
-if (side _injurer == teamPlayer)
-then
+switch (true)
+do
 {
-	if (_part == "")
-	then
+	// ---------------------------------- parts ------------------------------------
+	case (_part != ""):
 	{
-		if (_damage >= 1)
-		then
-		{
-			if (!(_unit getVariable ["incapacitated", false]))
-			then
-			{
-				_damage = 0.9;
-				[_unit, _injurer] call _makeUnconscious;
-			}
-			else
-			{
-				// already unconscious, check whether we're pushed into death
-				_overall = (_unit getVariable ["overallDamage", 0]) + (_damage - 1);
+		if (_damage <= CRITICAL_DAMAGE) exitWith {};
+		if (_part in ["arms", "hands", "legs"]) exitWith {};
 
-				if (_overall > 0.5)
-				then
-				{
-					_unit removeAllEventHandlers "HandleDamage";
-				}
-				else
-				{
-					_unit setVariable ["overallDamage", _overall];
-					_damage = 0.9;
-				};
-			};
-		}
-		else
-		{
-            //Abort helping if hit too hard
-			if (_damage > 0.25) then
-			{
-				if (_unit getVariable ["helping", false]) then
-				{
-					_unit setVariable ["cancelRevive", true];
-				};
-			};
-		};
-	}
-	else
+		_damage = CRITICAL_DAMAGE;
+
+		if (_unit getVariable ["incapacitated", false]) exitWith {};
+
+		[_unit, _injurer] call _makeUnconscious;
+	};
+
+	// --------------------------- common small damage -----------------------------
+	case (_damage <= CRITICAL_DAMAGE):
 	{
-		if (_damage >= 1)
-		then
-		{
-			if !(_part in ["arms", "hands", "legs"])
-			then
-			{
-				_damage = 0.9;
+		if (_damage <= STOP_HELPING_DAMAGE) exitWith {};
+		if !(_unit getVariable ["helping", false]) exitWith {};
 
-				// Don't trigger unconsciousness on sub-part hits (face/pelvis etc), only the container
-				if (_part in ["head", "body"])
-				then
-				{
-					if !(_unit getVariable ["incapacitated", false])
-					then
-					{
-						[_unit, _injurer] call _makeUnconscious;
-					};
-				};
-			};
-		};
+		//Abort helping if hit too hard
+		_unit setVariable ["cancelRevive", true];
+	};
+
+	// ---------------------------- not incapacitated ------------------------------
+	case !(_unit getVariable ["incapacitated", false]):
+	{
+		_damage = CRITICAL_DAMAGE;
+		[_unit, _injurer] call _makeUnconscious;
+	};
+
+	// ------------------------------ incapacitated --------------------------------
+	private _overall = (_unit getVariable ["overallDamage", 0]) + (_damage - 1);
+
+	case (_overall > 0.5):
+	{
+		_unit removeAllEventHandlers "HandleDamage";
+	};
+
+	default
+	{
+		_unit setVariable ["overallDamage", _overall];
+		_damage = CRITICAL_DAMAGE;
 	};
 };
 
