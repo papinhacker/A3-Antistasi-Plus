@@ -19,4 +19,7 @@ if !(toLower worldName == "cam_lao_nam") then {
 	mapX setObjectTexture [0, "Pictures\Mission\whiteboard.jpg"];
 };
 
+tf_radio_channel_name = "TaskForceRadio#1";
+tf_radio_channel_password = "2018";
+
 Info("Init Finished");
