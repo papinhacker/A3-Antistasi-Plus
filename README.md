@@ -35,7 +35,7 @@ Projectile Camera
 - Different occupant factions support for same modset - for example, 3CB Factions can provide HIL, CDF or USAF mission variants
 - CUP Vehicles/Weapons/Units support
 Various additional settings and small abilities - vehicle unflip, time multiplier et cetera
-- Various QoL fixes, tweaks, enhancements, UI overhaul (Similar weapons counted as one entity on infinite unlock, pickupable money items, vehicle unflip, time multiplier and many more!)
+- Various QoL fixes, tweaks, enhancements, UI overhaul (Similar weapons counted as one entity on infinite unlock, pickupable money items, vehicle unflip, time multiplier , Zeus persistent constructions and many more! see changelog to get full details)
 
 ## Credits
 - Original Mission by barbolani
