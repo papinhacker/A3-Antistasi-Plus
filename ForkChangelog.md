@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.8.3.2
+### Changes
+ - Neverenending Invaders Punishment fix 
+
+
 ## 1.8.3.1
 ### Changes
 - Fixed inability to access commander reassign button in commander menu for non-commanders
