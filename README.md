@@ -2,7 +2,7 @@
   <img alt="Antistasi Plus" width="200" heigth="200" src="https://user-images.githubusercontent.com/6746043/183047819-f23ce496-5a7a-45d1-b3f3-1aec7818c04a.png">
   <h1>Antistasi Plus</h1>
   <p>
-    <i>An Arma 3 persistent multiplayer scenario focused on guerilla warfare tactics.</i>
+    <i>An Arma 3 persistent multiplayer scenario about guerilla warfare tactics.</i>
     <br/>
     <i>Fork of Antistasi Community Version focused on expanding player's capabilities and introducing new gameplay features.</i>
   </p>
