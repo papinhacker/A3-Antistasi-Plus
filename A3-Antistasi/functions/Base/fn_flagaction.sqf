@@ -70,6 +70,7 @@ switch _typeX do
             if (isNil "actionX") then
             {
                 removeAllActions _flag;
+                if (A3A_hasACETowing) exitWith {};
                 if (player == player getVariable ["owner",player]) then {[] call SA_Add_Player_Tow_Actions};
             }
             else

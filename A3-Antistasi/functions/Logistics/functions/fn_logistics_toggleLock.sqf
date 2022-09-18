@@ -45,9 +45,12 @@ if !(isNil "_seats") then {//for vehicle loading cargo
     _vehicle lock _lock;
     if (_lock) then {
         //move out crew
-        {moveOut _x}forEach crew _vehicle;
+        {moveOut _x} forEach crew _vehicle;
 
         //detach tow ropes attached to cargo
+
+        if (A3A_hasACETowing) exitWith {};
+
         {
             _veh = ropeAttachedTo _x;
             if (!isNull _veh) then {[_veh,player] call SA_Put_Away_Tow_Ropes};

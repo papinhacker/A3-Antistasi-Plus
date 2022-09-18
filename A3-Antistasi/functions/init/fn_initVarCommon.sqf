@@ -95,6 +95,7 @@ if (A3A_hasTFARBeta) then { A3A_hasTFAR = false; };
 A3A_hasACE = !(isNil "ace_common_fnc_isModLoaded");
 A3A_hasACEHearing = isClass (configFile >> "CfgSounds" >> "ACE_EarRinging_Weak");
 A3A_hasACEMedical = isClass (configFile >> "CfgSounds" >> "ACE_heartbeat_fast_3");
+A3A_hasACETowing = isClass (configfile >> "CfgVehicles" >> "Car" >> "ACE_Actions" >> "ACE_MainActions" >> "ace_towing");
 A3A_hasPIRMedical = isClass (configFile >> "PIR_medical_menu");
 A3A_hasLAMBS = isClass (configFile >> "lambs_main_Display");
 //Content Mods (Units, Vehicles, Weapons, Clothes etc.)

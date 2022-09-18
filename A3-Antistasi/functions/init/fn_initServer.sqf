@@ -202,7 +202,10 @@ distanceXs = [] spawn A3A_fnc_distance;
 [] spawn A3A_fnc_resourcecheck;
 [] call A3A_fnc_initSupportCooldowns;
 [] spawn A3A_fnc_aggressionUpdateLoop;
-[] execVM "Scripts\fn_advancedTowingInit.sqf";
+
+if (!A3A_hasACETowing) then {
+	[] execVM "Scripts\fn_advancedTowingInit.sqf";
+};
 
 if (areRandomEventsEnabled) then {
 	[] spawn SCRT_fnc_encounter_gameEventLoop;
