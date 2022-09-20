@@ -11,25 +11,6 @@ params [
 	"_hitPoint"
 ];
 
-// Functionality unrelated to Antistasi revive
-if (side group _injurer == teamPlayer) then
-{
-	private _groupX = group _unit;
-	if (time > _groupX getVariable ["movedToCover",0]) then
-	{
-		if ((behaviour leader _groupX != "COMBAT") and (behaviour leader _groupX != "STEALTH")) then
-		{
-			_groupX setVariable ["movedToCover",time + 120];
-			{[_x,_injurer] call A3A_fnc_unitGetToCover} forEach units _groupX;
-		};
-	};
-
-	if (_part == "" && _damage < 1) then
-	{
-		if (_damage > 0.6) then {[_unit,_injurer] spawn A3A_fnc_unitGetToCover};
-	};
-};
-
 // Let ACE medical handle the rest (inc return value) if it's running
 if (A3A_hasACEMedical) exitWith {};
 

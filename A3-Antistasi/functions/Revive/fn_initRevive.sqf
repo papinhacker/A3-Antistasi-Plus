@@ -8,4 +8,7 @@ _unit setVariable ["respawning",false];
 
 _unit addEventHandler ["HandleDamage", A3A_fnc_handleDamageHelmet];
 _unit addEventHandler ["HandleDamage", A3A_fnc_handleDamageReport];
+
+if (true) then { _unit addEventHandler ["HandleDamage", A3A_fnc_handleDamageGetToCover]; };
+
 _unit addEventHandler ["HandleDamage", A3A_fnc_handleDamage];

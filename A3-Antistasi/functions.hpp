@@ -179,6 +179,7 @@ class A3A
         class VANTinfo {};
         class vehicleConvoyTravel {};
         class vehicleMarkers {};
+        class handleDamageGetToCover {};
     };
 
     class Collections
