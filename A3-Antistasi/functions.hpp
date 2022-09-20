@@ -525,6 +525,7 @@ class A3A
     {
         class pvpCheck {};
         class playerHasBeenPvPCheck {};
+        class handleDamageReport {};
     };
 
 	class REINF

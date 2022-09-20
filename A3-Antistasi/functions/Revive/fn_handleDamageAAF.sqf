@@ -24,25 +24,9 @@ if (side group _injurer == teamPlayer) then
 		};
 	};
 
-	if (_part == "" && _damage < 1) then 
+	if (_part == "" && _damage < 1) then
 	{
 		if (_damage > 0.6) then {[_unit,_injurer] spawn A3A_fnc_unitGetToCover};
-	};
-
-	// Contact report generation for PvP players
-	if (_part == "" && side group _unit == Occupants) then
-	{
-		// Check if unit is part of a garrison
-		private _marker = _unit getVariable ["markerX",""];
-		if (_marker != "" && {sidesX getVariable [_marker,sideUnknown] == Occupants}) then
-		{
-			// Limit last attack var changes and task updates to once per 30 seconds
-			private _lastAttackTime = garrison getVariable [_marker + "_lastAttack", -30];
-			if (_lastAttackTime + 30 < serverTime) then {
-				garrison setVariable [_marker + "_lastAttack", serverTime, true];
-				[_marker, teamPlayer, side group _unit] remoteExec ["A3A_fnc_underAttack", 2];
-			};
-		};
 	};
 };
 
@@ -53,7 +37,7 @@ if (A3A_hasACEMedical) exitWith {};
 private _makeUnconscious =
 {
 	params ["_unit", "_injurer"];
-   
+
 	_unit setVariable ["incapacitated",true,true];
 	_unit setUnconscious true;
 	if (vehicle _unit != _unit) then
@@ -61,7 +45,7 @@ private _makeUnconscious =
 		moveOut _unit;
 	};
 	if (isPlayer _unit) then {_unit allowDamage false};
-	
+
 	 //Make sure to pass group lead if unit is the leader
     	if (_unit == leader (group _unit)) then
     	{
@@ -71,7 +55,7 @@ private _makeUnconscious =
         		(group _unit) selectLeader ((units (group _unit)) select _index);
         	}
 	};
-	
+
 	[_unit,_injurer] spawn A3A_fnc_unconsciousAAF;
 };
 
