@@ -1,74 +1,15 @@
 // HandleDamage event handler for enemy (gov/inv) AIs
 
-params ["_unit","_part","_damage","_injurer","_projectile","_hitIndex","_instigator","_hitPoint"];
-
-// Functionality unrelated to Antistasi revive
-if (side (group _injurer) == teamPlayer)
-then
-{
-	// Helmet popping: use _hitpoint rather than _part to work around ACE calling its fake hitpoint "head"
-	if (isNil "A3A_hasPIRMedical" || { !A3A_hasPIRMedical })
-	then
-	{
-		if
-		(
-			_damage >= 1
-			&& { _hitPoint == "hithead"
-			&& {  random 100 < helmetLossChance }}
-		)
-		then
-		{
-			removeHeadgear _unit;
-		};
-	};
-
-
-	if !(A3A_hasLAMBS)
-	then
-	{
-		private _groupX = group _unit;
-
-		if
-		(
-			time > _groupX getVariable ["movedToCover", 0]
-			&& { behaviour leader _groupX != "COMBAT"
-			&& { behaviour leader _groupX != "STEALTH" }}
-		)
-		then
-		{
-			_groupX setVariable ["movedToCover",time + 120];
-			{[_x,_injurer] call A3A_fnc_unitGetToCover} forEach units _groupX;
-		};
-
-		if (_part == "" && _damage < 1) then
-		{
-			if (_damage > 0.6) then {[_unit,_injurer] spawn A3A_fnc_unitGetToCover};
-		};
-	};
-
-
-	// Contact report generation for PvP players
-	if (_part == "" && side group _unit == Occupants)
-	then
-	{
-		// Check if unit is part of a garrison
-		private _marker = _unit getVariable ["markerX",""];
-
-		if (_marker != "" && {sidesX getVariable [_marker,sideUnknown] == Occupants})
-		then
-		{
-			// Limit last attack var changes and task updates to once per 30 seconds
-			private _lastAttackTime = garrison getVariable [_marker + "_lastAttack", -30];
-
-			if (_lastAttackTime + 30 < serverTime)
-			then
-			{
-				garrison setVariable [_marker + "_lastAttack", serverTime, true];
-				[_marker, teamPlayer, side group _unit] remoteExec ["A3A_fnc_underAttack", 2];
-			};
-		};
-	};
-};
+params [
+	"_unit",
+	"_part",
+	"_damage",
+	"_injurer",
+	"_projectile",
+	"_hitIndex",
+	"_instigator",
+	"_hitPoint"
+];
 
 // Let ACE medical handle the rest (inc return value) if it's running
 if (A3A_hasACEMedical) exitWith {};

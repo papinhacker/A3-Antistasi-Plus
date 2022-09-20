@@ -1,10 +1,10 @@
 private _title = call SCRT_fnc_misc_getMissionTitle;
 
-_credits = [ 
-	[ _title, [antistasiPlusVersion]], 
-	[ "Antistasi Version:", [antistasiVersion]], 
-	[ "Antistasi Plus Authors:", ["Socrates"]], 
-	[ "Antistasi Authors:", ["Barbolani","Official Antistasi Community"]] 
+_credits = [
+	[ _title, [antistasiPlusVersion]],
+	[ "Antistasi Version:", [antistasiVersion]],
+	[ "Antistasi Plus Authors:", ["Socrates"]],
+	[ "Antistasi Authors:", ["Barbolani","Official Antistasi Community"]]
 ];
 _layer = "credits1" call bis_fnc_rscLayer;
 _delay = 4;
@@ -12,7 +12,7 @@ _duration = 4;
 {
 	_title = _x param [0,""];
 	_names = _x select 1;
-	_text = format ["<t size=1.5 font='PuristaBold'>%1</t>",toUpper (_title)] + "<br />";
+	_text = format ["<t size='1.5' font='PuristaBold'>%1</t>",toUpper (_title)] + "<br />";
 	{
 		//Second line break controls size of gap between authors. &#160; is a non-breaking space character, which prevents the size being ignored.
 		_text = _text + _x + "<br /><t size='0.2'>&#160;</t><br />";
