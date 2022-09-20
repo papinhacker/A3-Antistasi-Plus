@@ -125,9 +125,9 @@ DECLARE_SERVER_VAR(A3A_coldWarMode, false);
 //Currently destroyed buildings.
 //DECLARE_SERVER_VAR(destroyedBuildings, []);
 //Initial HR
-server setVariable ["hr",8,true];
+server setVariable ["hr", 8, true];
 //Initial faction money pool
-server setVariable ["resourcesFIA",1000,true];
+server setVariable ["resourcesFIA", 1000, true];
 // Time of last garbage clean. Note: serverTime may not reset to zero if server was not restarted. Therefore, it should capture the time at start of mission.
 DECLARE_SERVER_VAR(A3A_lastGarbageCleanTime, serverTime);
 
@@ -545,6 +545,7 @@ if (local flagX) then { flagX setFlagTexture SDKFlagTexture } else { [flagX, SDK
 [2,"Sanity-checking templates",_fileName] call A3A_fnc_log;
 
 // modify these appropriately when adding new template vars
+/*
 private _nonClassVars = ["nameTeamPlayer", "SDKFlagTexture", "SDKFlagMarkerType", "nameOccupants", "NATOPlayerLoadouts", "NATOFlagTexture", "flagNATOmrk", "nameInvaders", "CSATPlayerLoadouts", "CSATFlagTexture", "flagCSATmrk"];
 private _magazineVars = ["SDKMortarHEMag", "SDKMortarSmokeMag", "vehNATOMRLSMags", "vehCSATMRLSMags", "breachingExplosivesAPC", "breachingExplosivesTank", "NATOmortarMagazineHE", "NATOHowitzerMagazineHE", "CSATmortarMagazineHE", "CSATHowitzerMagazineHE"];
 
@@ -587,6 +588,7 @@ if (count _missingVars > 0) then {
 if (count _badCaseVars > 0) then {
 	[1, format ["Miscased classnames: %1", _badCaseVars], _filename] call A3A_fnc_log;
 };
+*/
 
 ////////////////////////////////////
 //      CIVILIAN VEHICLES       ///

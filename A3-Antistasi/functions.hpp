@@ -179,6 +179,7 @@ class A3A
         class VANTinfo {};
         class vehicleConvoyTravel {};
         class vehicleMarkers {};
+        class handleDamageGetToCover {};
     };
 
     class Collections
@@ -525,6 +526,7 @@ class A3A
     {
         class pvpCheck {};
         class playerHasBeenPvPCheck {};
+        class handleDamageReport {};
     };
 
 	class REINF
@@ -712,4 +714,9 @@ class A3A
         class attachedObjects {};
         class dropObject {};
     };
+
+    class helmet
+    {
+        class handleDamageHelmet {};
+    }
 };
