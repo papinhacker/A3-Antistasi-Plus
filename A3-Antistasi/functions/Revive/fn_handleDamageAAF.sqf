@@ -1,19 +1,19 @@
 // HandleDamage event handler for enemy (gov/inv) AIs
 
-params ["_unit","_part","_damage","_injurer","_projectile","_hitIndex","_instigator","_hitPoint"];
+params [
+	"_unit",
+	"_part",
+	"_damage",
+	"_injurer",
+	"_projectile",
+	"_hitIndex",
+	"_instigator",
+	"_hitPoint"
+];
 
 // Functionality unrelated to Antistasi revive
 if (side group _injurer == teamPlayer) then
 {
-	// Helmet popping: use _hitpoint rather than _part to work around ACE calling its fake hitpoint "head"
-	if (_damage >= 1 && {_hitPoint == "hithead"}) then
-	{
-		if (random 100 < helmetLossChance) then
-		{
-			removeHeadgear _unit;
-		};
-	};
-
 	private _groupX = group _unit;
 	if (time > _groupX getVariable ["movedToCover",0]) then
 	{

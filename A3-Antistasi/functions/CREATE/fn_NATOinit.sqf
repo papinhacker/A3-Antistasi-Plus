@@ -29,6 +29,8 @@ if (isNil "_type") then {
 if (_type == "Fin_random_F") exitWith {};
 
 //Sets the EH for the unit
+
+_unit addEventHandler ["HandleDamage", A3A_fnc_handleDamageHelmet];
 _unit addEventHandler ["HandleDamage", A3A_fnc_handleDamageAAF];
 _unit addEventHandler ["killed", A3A_fnc_occupantInvaderUnitKilledEH];
 

@@ -712,4 +712,9 @@ class A3A
         class attachedObjects {};
         class dropObject {};
     };
+
+    class helmet
+    {
+        class handleDamageHelmet {};
+    }
 };
