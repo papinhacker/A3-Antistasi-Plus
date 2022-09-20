@@ -33,7 +33,7 @@ if (_type == "Fin_random_F") exitWith {};
 _unit addEventHandler ["HandleDamage", A3A_fnc_handleDamageHelmet];
 _unit addEventHandler ["HandleDamage", A3A_fnc_handleDamageReport];
 
-if (true) then { _unit addEventHandler ["HandleDamage", A3A_fnc_handleDamageGetToCover]; };
+// if (true) then { _unit addEventHandler ["HandleDamage", A3A_fnc_handleDamageGetToCover]; };
 
 _unit addEventHandler ["HandleDamage", A3A_fnc_handleDamageAAF];
 _unit addEventHandler ["killed", A3A_fnc_occupantInvaderUnitKilledEH];
