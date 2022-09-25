@@ -130,4 +130,6 @@ if ((_sideX != side (group _medic)) and ((_sideX == Occupants) or (_sideX == Inv
     sleep 2;
 };
 _cured setVariable ["incapacitated",false,true];        // why is this applied later? check
+_cured setVariable ["overallDamage", 0]; // reset
+
 true;

@@ -31,10 +31,10 @@ private _makeUnconscious =
 	_unit setUnconscious true;
 
 	if (vehicle _unit != _unit) then { moveOut _unit; };
-	if (isPlayer _unit) then { _unit allowDamage false; };
+	_unit allowDamage false;
 
-	private _fromside = if (!isNull _injurer) then {side group _injurer} else {sideUnknown};
-	[_unit, _fromside] spawn A3A_fnc_unconscious;
+	private _fromside = if (!isNull _injurer) then { side group _injurer } else { sideUnknown };
+	[_unit, _fromside] spawn A3A_fnc_unconsciousPlayer;
 
 };
 
@@ -77,15 +77,7 @@ switch (true) do {
 
 	default
 	{
-		if (isPlayer _unit) then
-		{
-			[_unit] spawn A3A_fnc_respawn;
-			0;
-		}
-		else
-		{
-			_unit removeAllEventHandlers "HandleDamage";
-			nil;
-		};
+		[_unit] spawn A3A_fnc_respawn;
+		0;
 	};
 };

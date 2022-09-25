@@ -117,6 +117,7 @@ class A3A
         class unlockStatic {};
         class updateRebelStatics {};
         class zoneCheck {};
+        class getNewLeader {};
     };
 
     class AI
@@ -560,11 +561,14 @@ class A3A
 		class carry {};
 		class handleDamage {};
 		class handleDamageAAF {};
+		class handleDamagePlayer {};
 		class initRevive {};
 		class isMedic {};
 		class respawn {};
 		class unconscious {};
 		class unconsciousAAF {};
+        class unconsciousPlayer {};
+        class discordRichUpdate {};
 	};
 
     class Runways

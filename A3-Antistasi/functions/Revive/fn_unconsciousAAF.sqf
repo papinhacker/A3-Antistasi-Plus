@@ -1,20 +1,34 @@
 params ["_unit", "_injurer"];
 
-private _bleedOutTime = if (surfaceIsWater (position _unit)) then {time + 60} else {time + 300};
+_unit setVariable ["incapacitated", true, true];
+_unit setUnconscious true;
+
+if (vehicle _unit != _unit) then { moveOut _unit; };
+if (isPlayer _unit) then { _unit allowDamage false; };
+
+[_unit] call A3A_fnc_getNewLeader;
+
+private _bleedOutTime =
+if (surfaceIsWater (position _unit))
+then { time + 60 } else { time + 300 };
+
 private _playerNear = false;
 private _group = group _unit;
 private _side = side _group;
 
-if ({if ((isPlayer _x) and (_x distance _unit < distanceSPWN2)) exitWith {1}} count allUnits != 0) then
+private _isSomebodyOfPlayerNear = allPlayers findIf { _x != _unit && { _x distance _unit < distanceSPWN2 }} != -1;
+
+if (_isSomebodyOfPlayerNear) then
 {
 	_playerNear = true;
-	[_unit,"heal"] remoteExec ["A3A_fnc_flagaction",0,_unit];
-	[_unit,true] remoteExec ["setCaptive"];
+	[_unit, "heal"] remoteExec ["A3A_fnc_flagaction", 0, _unit];
+	[_unit, true] remoteExec ["setCaptive"];
 	_unit setCaptive true;
 };
 
 _unit setFatigue 1;
-[_group,_injurer] spawn A3A_fnc_AIreactOnKill;
+
+[_group, _injurer] spawn A3A_fnc_AIreactOnKill;
 
 while
 {
@@ -38,6 +52,7 @@ while
 };
 
 _unit stop false;
+
 if (_playerNear) then
 {
 	[_unit,"remove"] remoteExec ["A3A_fnc_flagaction",0,_unit];
