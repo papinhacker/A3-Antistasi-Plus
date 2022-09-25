@@ -130,7 +130,8 @@ if (count _positionTel > 0) then {
 		["Fast Travel", "You cannot Fast Travel to an area under attack or with enemies in the surrounding."] call SCRT_fnc_misc_showDeniedActionHint; openMap [false,false]
 	};
 
-	if (_positionTel distance getMarkerPos _base < 50) then {
+	if (_positionTel distance getMarkerPos _base < 50) then
+	{
 		_positionX = [getMarkerPos _base, 10, random 360] call BIS_Fnc_relPos;
 		_distanceX = round (((position _boss) distance _positionX)/200);
 		//if (!_esHC) then {disableUserInput true; cutText ["Fast traveling, please wait","BLACK",2]; sleep 2;} else {hcShowBar false;hcShowBar true;hint format ["Moving group %1 to destination",groupID _groupX]; sleep _distanceX;};
@@ -159,59 +160,78 @@ if (count _positionTel > 0) then {
 		};
 
 		{
-		_unit = _x;
-		if ((!isPlayer _unit) or (_unit == player)) then
+			_unit = _x;
+
+			if ((!isPlayer _unit) or (_unit == player)) then
 			{
-			//_unit hideObject true;
-			_unit allowDamage false;
-			if (_unit != vehicle _unit) then
+				//_unit hideObject true;
+				_unit allowDamage false;
+
+				if (_unit != vehicle _unit) then
 				{
-				if (driver vehicle _unit == _unit) then
+					if (driver (vehicle _unit) == _unit)
+					then
 					{
-					sleep 3;
-					_radiusX = 10;
-					while {true} do
+						sleep 3;
+						_radiusX = 10;
+
+						while {true} do
 						{
-						_roads = _positionX nearRoads _radiusX;
-						if (count _roads > 0) exitWith {};
-						_radiusX = _radiusX + 10;
+							_roads = _positionX nearRoads _radiusX;
+
+							if (count _roads > 0) exitWith {};
+
+							_radiusX = _radiusX + 10;
 						};
-					_road = _roads select 0;
-					_pos = position _road findEmptyPosition [10,100,typeOf (vehicle _unit)];
-					vehicle _unit setPos _pos;
+
+						_road = _roads select 0;
+						_pos = position _road findEmptyPosition [10,100,typeOf (vehicle _unit)];
+
+						if (_pos isEqualTo []) exitWIth {};
+
+						vehicle _unit setPos _pos;
 					};
-				if ((vehicle _unit isKindOf "StaticWeapon") and (!isPlayer (leader _unit))) then
+
+					if (
+						(vehicle _unit) isKindOf "StaticWeapon"
+						&& { !isPlayer (leader _unit) }
+					)
+					then
 					{
-					_pos = _positionX findEmptyPosition [10,100,typeOf (vehicle _unit)];
-					vehicle _unit setPosATL _pos;
+						_pos = _positionX findEmptyPosition [10, 100, typeOf (vehicle _unit)];
+
+						if (_pos isEqualTo []) exitWIth {};
+
+						(vehicle _unit) setPosATL _pos;
 					};
 				}
-			else
-				{
-				if (!(_unit getVariable ["incapacitated",false])) then
-					{
-					_positionX = _positionX findEmptyPosition [1,50,typeOf _unit];
-					_unit setPosATL _positionX;
-					if (isPlayer leader _unit) then {_unit setVariable ["rearming",false]};
-					_unit doWatch objNull;
-					_unit doFollow leader _unit;
-					}
 				else
+				{
+					if (!(_unit getVariable ["incapacitated",false])) then
 					{
-					_positionX = _positionX findEmptyPosition [1,50,typeOf _unit];
-					_unit setPosATL _positionX;
+						_positionX = _positionX findEmptyPosition [1,50,typeOf _unit];
+						_unit setPosATL _positionX;
+						if (isPlayer leader _unit) then {_unit setVariable ["rearming",false]};
+						_unit doWatch objNull;
+						_unit doFollow leader _unit;
+					}
+					else
+					{
+						_positionX = _positionX findEmptyPosition [1,50,typeOf _unit];
+						_unit setPosATL _positionX;
 					};
 				};
 			};
 		} forEach units _groupX;
+
 		if (!_esHC) then {disableUserInput false;cutText ["You arrived at the destination.","BLACK IN",1]} else {["Fast Travel", format ["Group %1 arrived to destination.",groupID _groupX]] call A3A_fnc_customHint;};
 		if (_forcedX) then {forcedSpawn = forcedSpawn - [_base]};
 		sleep 5;
 		{_x allowDamage true} forEach units _groupX;
-		}
+	}
 	else
-		{
-		["Fast Travel", "You must click near a marker under your control."] call SCRT_fnc_misc_showDeniedActionHint;
-		};
+	{
+			["Fast Travel", "You must click near a marker under your control."] call SCRT_fnc_misc_showDeniedActionHint;
 	};
+};
 openMap false;
